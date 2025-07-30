@@ -49,6 +49,7 @@ const Header = () => {
                 src="/lovable-uploads/8c52e7cd-49ad-40df-b2b2-a3701eca0b7a.png" 
                 alt="Kiwoko Hospital Logo" 
                 className="w-12 h-12 object-contain"
+                key="kiwoko-logo"
               />
               <div>
                 <h1 className="text-xl font-bold text-primary">Kiwoko Health</h1>
