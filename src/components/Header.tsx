@@ -45,9 +45,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">K</span>
-              </div>
+              <img 
+                src="/lovable-uploads/8c52e7cd-49ad-40df-b2b2-a3701eca0b7a.png" 
+                alt="Kiwoko Hospital Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h1 className="text-xl font-bold text-primary">Kiwoko Health</h1>
                 <p className="text-sm text-muted-foreground">Training Institute</p>

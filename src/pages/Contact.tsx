@@ -54,35 +54,68 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-8 text-primary">Get In Touch</h2>
               
               <div className="space-y-6">
-                {/* Address */}
+                {/* Nursing and Midwifery */}
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-6 w-6 text-primary mt-1" />
                       <div>
-                        <h3 className="font-semibold mb-2">Our Location</h3>
+                        <h3 className="font-semibold mb-2">School of Nursing and Midwifery</h3>
                         <p className="text-muted-foreground">
-                          Kiwoko Health Training Institute<br />
-                          P.O. Box 12345<br />
-                          Kiwoko, Nakaseke District<br />
-                          Uganda
+                          Kiwoko Hospital<br />
+                          P.O. Box 149<br />
+                          Luweero, Uganda<br />
+                          <span className="italic">"TRAINED TO SERVE"</span>
                         </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Phone */}
+                {/* Medical Laboratory Training */}
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold mb-2">Medical Laboratory Training School</h3>
+                        <p className="text-muted-foreground">
+                          Kiwoko Medical Laboratory Training School<br />
+                          P.O. Box 149<br />
+                          Luwero, Uganda
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Phone - Nursing */}
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <Phone className="h-6 w-6 text-primary mt-1" />
                       <div>
-                        <h3 className="font-semibold mb-2">Phone Numbers</h3>
+                        <h3 className="font-semibold mb-2">Nursing & Midwifery Contacts</h3>
                         <div className="space-y-1 text-muted-foreground">
-                          <p>Main Office: +256 123 456 789</p>
-                          <p>Admissions: +256 123 456 790</p>
-                          <p>Student Affairs: +256 123 456 791</p>
+                          <p>Office Phone: 0392 912059</p>
+                          <p>Principal Tutor: 0774228578</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Phone - Lab */}
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <Phone className="h-6 w-6 text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold mb-2">Medical Laboratory Contacts</h3>
+                        <div className="space-y-1 text-muted-foreground">
+                          <p>Principal Lab School: 0779600026</p>
+                          <p>Academic Registrar: 0773660393</p>
+                          <p>Office: 039902977</p>
                         </div>
                       </div>
                     </div>
@@ -97,9 +130,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-2">Email Addresses</h3>
                         <div className="space-y-1 text-muted-foreground">
-                          <p>General: info@kiwoko.ac.ug</p>
-                          <p>Admissions: admissions@kiwoko.ac.ug</p>
-                          <p>Student Support: students@kiwoko.ac.ug</p>
+                          <p>Nursing Principal: principalnmts@kiwokohospital.com</p>
+                          <p>Lab Principal: labprincipal@kiwokohospital.org</p>
                         </div>
                       </div>
                     </div>
