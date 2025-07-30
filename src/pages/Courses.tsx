@@ -9,64 +9,54 @@ import { Link } from "react-router-dom";
 const Courses = () => {
   const programs = [
     {
-      title: "Diploma in Nursing",
-      duration: "3 Years",
-      level: "Diploma",
+      title: "Certificate in Nursing",
+      duration: "2.5 Years",
+      level: "Certificate",
       icon: <Heart className="h-8 w-8 text-secondary" />,
       description: "Comprehensive nursing education preparing compassionate and skilled nurses for various healthcare settings.",
       requirements: ["UACE with at least 2 principal passes", "UCE with at least 5 passes including English, Mathematics, and Sciences", "Must be at least 18 years old"],
-      career: ["Staff Nurse", "Community Health Nurse", "Specialized Nursing Units"],
+      career: ["Staff Nurse", "Community Health Nurse", "Hospital Nurse"],
       subjects: ["Anatomy & Physiology", "Nursing Fundamentals", "Medical-Surgical Nursing", "Pediatric Nursing", "Mental Health Nursing"]
     },
     {
-      title: "Diploma in Midwifery",
-      duration: "2 Years",
-      level: "Diploma",
+      title: "Certificate in Midwifery",
+      duration: "2.5 Years",
+      level: "Certificate",
       icon: <Baby className="h-8 w-8 text-secondary" />,
       description: "Specialized training in maternal and newborn care, family planning, and reproductive health services.",
-      requirements: ["Certificate in Nursing or equivalent", "Valid nursing license", "At least 2 years nursing experience"],
-      career: ["Midwife", "Maternal Health Specialist", "Family Planning Counselor"],
+      requirements: ["UACE with at least 2 principal passes", "UCE with at least 5 passes including Biology and Chemistry", "Must be at least 18 years old"],
+      career: ["Certified Midwife", "Maternal Health Assistant", "Family Planning Counselor"],
       subjects: ["Maternal Health", "Newborn Care", "Family Planning", "Reproductive Health", "Emergency Obstetrics"]
     },
     {
-      title: "Diploma in Clinical Medicine",
-      duration: "3 Years",
+      title: "Diploma in Nursing",
+      duration: "1.5 Years",
       level: "Diploma",
-      icon: <Stethoscope className="h-8 w-8 text-secondary" />,
-      description: "Training clinical officers to provide primary healthcare services in hospitals and health centers.",
-      requirements: ["UACE with at least 2 principal passes in Sciences", "UCE with at least 5 passes", "Strong background in Biology and Chemistry"],
-      career: ["Clinical Officer", "Health Center In-Charge", "Primary Care Provider"],
-      subjects: ["Clinical Medicine", "Surgery", "Pediatrics", "Obstetrics & Gynecology", "Public Health"]
+      icon: <Heart className="h-8 w-8 text-secondary" />,
+      description: "Advanced nursing education for experienced healthcare workers seeking diploma qualifications.",
+      requirements: ["Certificate in Nursing", "Valid nursing registration", "At least 2 years nursing experience"],
+      career: ["Senior Nurse", "Ward Supervisor", "Clinical Instructor"],
+      subjects: ["Advanced Nursing Practice", "Leadership in Nursing", "Research Methods", "Quality Improvement", "Health Management"]
     },
     {
-      title: "Diploma in Medical Laboratory Technology",
-      duration: "3 Years",
+      title: "Diploma in Midwifery",
+      duration: "1.5 Years",
       level: "Diploma",
+      icon: <Baby className="h-8 w-8 text-secondary" />,
+      description: "Advanced midwifery training for certified midwives seeking diploma qualification.",
+      requirements: ["Certificate in Midwifery", "Valid midwifery registration", "At least 2 years midwifery experience"],
+      career: ["Senior Midwife", "Midwifery Supervisor", "Maternal Health Specialist"],
+      subjects: ["Advanced Midwifery Practice", "High-Risk Pregnancies", "Newborn Intensive Care", "Midwifery Leadership", "Research in Midwifery"]
+    },
+    {
+      title: "Certificate in Medical Laboratory Techniques",
+      duration: "2 Years",
+      level: "Certificate",
       icon: <Microscope className="h-8 w-8 text-secondary" />,
-      description: "Training medical laboratory technologists in diagnostic testing and laboratory management.",
+      description: "Training in basic laboratory techniques and diagnostic testing procedures.",
       requirements: ["UACE with passes in Chemistry and Biology", "UCE with Mathematics and Sciences", "Good analytical skills"],
-      career: ["Medical Laboratory Technologist", "Laboratory Supervisor", "Research Assistant"],
-      subjects: ["Clinical Chemistry", "Hematology", "Microbiology", "Parasitology", "Laboratory Management"]
-    },
-    {
-      title: "Certificate in Community Health",
-      duration: "1 Year",
-      level: "Certificate",
-      icon: <Users className="h-8 w-8 text-secondary" />,
-      description: "Training community health workers to provide basic healthcare services at the community level.",
-      requirements: ["UCE with at least 5 passes", "Community leadership experience preferred", "Passion for community service"],
-      career: ["Community Health Worker", "Health Educator", "Village Health Team Leader"],
-      subjects: ["Community Health", "Health Education", "Basic First Aid", "Disease Prevention", "Health Promotion"]
-    },
-    {
-      title: "Certificate in Health Records Management",
-      duration: "1 Year",
-      level: "Certificate",
-      icon: <BookOpen className="h-8 w-8 text-secondary" />,
-      description: "Training in health information management, medical records, and health data systems.",
-      requirements: ["UCE with passes in English and Mathematics", "Computer literacy", "Attention to detail"],
-      career: ["Health Records Officer", "Medical Secretary", "Health Information Assistant"],
-      subjects: ["Health Information Systems", "Medical Terminology", "Records Management", "Data Analysis", "Computer Applications"]
+      career: ["Laboratory Technician", "Medical Laboratory Assistant", "Research Assistant"],
+      subjects: ["Clinical Chemistry", "Hematology", "Microbiology", "Parasitology", "Laboratory Safety"]
     }
   ];
 
