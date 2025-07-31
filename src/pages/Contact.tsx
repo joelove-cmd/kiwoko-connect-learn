@@ -54,85 +54,81 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-8 text-primary">Get In Touch</h2>
               
               <div className="space-y-6">
-                {/* Nursing and Midwifery */}
+                {/* School of Nursing and Midwifery */}
                 <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <CardHeader>
+                    <CardTitle className="text-xl">School of Nursing and Midwifery</CardTitle>
+                    <p className="text-sm text-muted-foreground italic">"TRAINED TO SERVE"</p>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-2">School of Nursing and Midwifery</h3>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium">Address</p>
+                        <p className="text-muted-foreground text-sm">
                           Kiwoko Hospital<br />
                           P.O. Box 149<br />
-                          Luweero, Uganda<br />
-                          <span className="italic">"TRAINED TO SERVE"</span>
+                          Luweero, Uganda
                         </p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium">Phone Numbers</p>
+                        <div className="text-muted-foreground text-sm space-y-1">
+                          <p>Office Phone: 0392 912059</p>
+                          <p>Principal Tutor: 0774228578</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start space-x-3">
+                      <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="font-medium">Email</p>
+                        <p className="text-muted-foreground text-sm">principalnmts@kiwokohospital.com</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Medical Laboratory Training */}
+                {/* Medical Laboratory Training School */}
                 <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <CardHeader>
+                    <CardTitle className="text-xl">Medical Laboratory Training School</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-2">Medical Laboratory Training School</h3>
-                        <p className="text-muted-foreground">
+                        <p className="font-medium">Address</p>
+                        <p className="text-muted-foreground text-sm">
                           Kiwoko Medical Laboratory Training School<br />
                           P.O. Box 149<br />
                           Luwero, Uganda
                         </p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-
-                {/* Phone - Nursing */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Phone className="h-6 w-6 text-primary mt-1" />
+                    
+                    <div className="flex items-start space-x-3">
+                      <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-2">Nursing & Midwifery Contacts</h3>
-                        <div className="space-y-1 text-muted-foreground">
-                          <p>Office Phone: 0392 912059</p>
-                          <p>Principal Tutor: 0774228578</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Phone - Lab */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Phone className="h-6 w-6 text-primary mt-1" />
-                      <div>
-                        <h3 className="font-semibold mb-2">Medical Laboratory Contacts</h3>
-                        <div className="space-y-1 text-muted-foreground">
+                        <p className="font-medium">Phone Numbers</p>
+                        <div className="text-muted-foreground text-sm space-y-1">
                           <p>Principal Lab School: 0779600026</p>
                           <p>Academic Registrar: 0773660393</p>
                           <p>Office: 039902977</p>
                         </div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-
-                {/* Email */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <Mail className="h-6 w-6 text-primary mt-1" />
+                    
+                    <div className="flex items-start space-x-3">
+                      <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-2">Email Addresses</h3>
-                        <div className="space-y-1 text-muted-foreground">
-                          <p>Nursing Principal: principalnmts@kiwokohospital.com</p>
-                          <p>Lab Principal: labprincipal@kiwokohospital.org</p>
-                        </div>
+                        <p className="font-medium">Email</p>
+                        <p className="text-muted-foreground text-sm">labprincipal@kiwokohospital.org</p>
                       </div>
                     </div>
                   </CardContent>
