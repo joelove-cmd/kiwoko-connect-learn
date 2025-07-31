@@ -2,8 +2,8 @@ import React from 'react';
 import { MapPin } from 'lucide-react';
 
 const Map = () => {
-  // Kiwoko Hospital coordinates: 0.7738° N, 32.5553° E
-  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2168524816285!2d32.55530731475392!3d0.7738000993632748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d6b3a0c5b5b5b%3A0x1234567890abcdef!2sKiwoko%20Hospital!5e0!3m2!1sen!2sug!4v1634567890123!5m2!1sen!2sug";
+  // Updated Google Maps link for Kiwoko Hospital
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.076896264998!2d32.544815!3d0.7751245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d6b3859c2b7c5%3A0x4e35b1b9e8b7c1c5!2sKiwoko%20Hospital!5e0!3m2!1sen!2sug!4v1693910000000!5m2!1sen!2sug";
 
   return (
     <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
