@@ -31,26 +31,32 @@ const Index = () => {
 
   const programs = [
     {
-      title: "Nursing",
-      duration: "3 Years",
+      title: "Certificate in Nursing",
+      duration: "2.5 Years",
       description: "Comprehensive nursing education preparing compassionate caregivers.",
       icon: <Heart className="h-6 w-6" />
     },
     {
-      title: "Midwifery",
-      duration: "2 Years",
+      title: "Certificate in Midwifery",
+      duration: "2.5 Years",
       description: "Specialized training in maternal and newborn care.",
       icon: <Users className="h-6 w-6" />
     },
     {
-      title: "Clinical Medicine",
-      duration: "3 Years",
-      description: "Training clinical officers for primary healthcare delivery.",
-      icon: <Stethoscope className="h-6 w-6" />
+      title: "Diploma in Nursing",
+      duration: "1.5 Years",
+      description: "Advanced nursing education for professional development.",
+      icon: <Heart className="h-6 w-6" />
     },
     {
-      title: "Laboratory Technology",
-      duration: "3 Years",
+      title: "Diploma in Midwifery", 
+      duration: "1.5 Years",
+      description: "Advanced midwifery training for skilled practitioners.",
+      icon: <Users className="h-6 w-6" />
+    },
+    {
+      title: "Certificate in Medical Laboratory Techniques",
+      duration: "2 Years",
       description: "Medical laboratory science and diagnostic technology.",
       icon: <BookOpen className="h-6 w-6" />
     }

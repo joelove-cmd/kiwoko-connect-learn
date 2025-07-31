@@ -24,16 +24,16 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Phone className="h-4 w-4" />
-                <span>+256 XXX XXX XXX</span>
+                <span>0392 912059</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Mail className="h-4 w-4" />
-                <span>info@kiwokohealth.ac.ug</span>
+                <span>principalnmts@kiwokohospital.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-1">
               <MapPin className="h-4 w-4" />
-              <span>Kampala, Uganda</span>
+              <span>Kiwoko Hospital, Luweero, Uganda</span>
             </div>
           </div>
         </div>

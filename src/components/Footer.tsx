@@ -59,19 +59,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Programs</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-sm opacity-90">Nursing</span>
+                <span className="text-sm opacity-90">Certificate in Nursing</span>
               </li>
               <li>
-                <span className="text-sm opacity-90">Midwifery</span>
+                <span className="text-sm opacity-90">Certificate in Midwifery</span>
               </li>
               <li>
-                <span className="text-sm opacity-90">Clinical Medicine</span>
+                <span className="text-sm opacity-90">Diploma in Nursing</span>
               </li>
               <li>
-                <span className="text-sm opacity-90">Laboratory Technology</span>
+                <span className="text-sm opacity-90">Diploma in Midwifery</span>
               </li>
               <li>
-                <span className="text-sm opacity-90">Public Health</span>
+                <span className="text-sm opacity-90">Certificate in Medical Laboratory Techniques</span>
               </li>
             </ul>
           </div>
@@ -82,15 +82,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">Kiwoko, Nakaseke District, Uganda</span>
+                <span className="text-sm">Kiwoko Hospital, PO Box 149, Luweero, Uganda</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">+256 XXX XXX XXX</span>
+                <span className="text-sm">0392 912059</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span className="text-sm">info@kiwokohealth.ac.ug</span>
+                <span className="text-sm">principalnmts@kiwokohospital.com</span>
               </div>
             </div>
 
