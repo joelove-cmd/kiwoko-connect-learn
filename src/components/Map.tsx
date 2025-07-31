@@ -1,108 +1,32 @@
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import React from 'react';
 import { MapPin } from 'lucide-react';
 
 const Map = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
-  const [mapInitialized, setMapInitialized] = useState(false);
-
-  // Kiwoko Hospital coordinates
-  const kiwokoCoordinates: [number, number] = [32.55, 0.77];
-
-  const initializeMap = () => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    try {
-      mapboxgl.accessToken = mapboxToken;
-      
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v12',
-        center: kiwokoCoordinates,
-        zoom: 15,
-      });
-
-      // Add marker for Kiwoko Hospital
-      new mapboxgl.Marker({
-        color: '#3B82F6'
-      })
-        .setLngLat(kiwokoCoordinates)
-        .setPopup(
-          new mapboxgl.Popup().setHTML(`
-            <div class="p-2">
-              <h3 class="font-semibold">Kiwoko Hospital</h3>
-              <p class="text-sm text-gray-600">P.O. Box 149, Luweero, Uganda</p>
-            </div>
-          `)
-        )
-        .addTo(map.current);
-
-      // Add navigation controls
-      map.current.addControl(
-        new mapboxgl.NavigationControl(),
-        'top-right'
-      );
-
-      setMapInitialized(true);
-    } catch (error) {
-      console.error('Error initializing map:', error);
-    }
-  };
-
-  useEffect(() => {
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
-
-  if (!mapInitialized) {
-    return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <MapPin className="h-5 w-5" />
-            Interactive Map Setup
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-sm text-muted-foreground">
-            To display the interactive map, please enter your Mapbox public token. 
-            You can get one from <a href="https://mapbox.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">mapbox.com</a>.
-          </p>
-          <div className="flex gap-2">
-            <Input
-              placeholder="Enter your Mapbox public token..."
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              type="password"
-            />
-            <Button onClick={initializeMap} disabled={!mapboxToken}>
-              Load Map
-            </Button>
-          </div>
-          <div className="bg-muted p-4 rounded-lg">
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="h-4 w-4 text-primary" />
-              <span className="font-medium">Kiwoko Hospital Location</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Kiwoko Hospital, P.O. Box 149, Luweero, Uganda
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
+  // Kiwoko Hospital coordinates: 0.7738° N, 32.5553° E
+  const embedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.2168524816285!2d32.55530731475392!3d0.7738000993632748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d6b3a0c5b5b5b%3A0x1234567890abcdef!2sKiwoko%20Hospital!5e0!3m2!1sen!2sug!4v1634567890123!5m2!1sen!2sug";
 
   return (
-    <div className="relative w-full h-96 rounded-lg overflow-hidden">
-      <div ref={mapContainer} className="absolute inset-0" />
+    <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        src={embedUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Kiwoko Hospital Location"
+        className="rounded-lg"
+      />
+      <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur-sm rounded-lg p-3 shadow-md">
+        <div className="flex items-center gap-2">
+          <MapPin className="h-4 w-4 text-primary" />
+          <span className="text-sm font-medium">Kiwoko Hospital</span>
+        </div>
+        <p className="text-xs text-muted-foreground mt-1">
+          P.O. Box 149, Luweero, Uganda
+        </p>
+      </div>
     </div>
   );
 };
