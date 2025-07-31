@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
+import Map from "@/components/Map";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -281,19 +282,9 @@ const Contact = () => {
             </p>
           </div>
           
-          <Card>
-            <CardContent className="p-0">
-              <div className="bg-muted h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                  <p className="text-muted-foreground">Interactive map coming soon</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Located in Kiwoko, Nakaseke District, Uganda
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="mt-8">
+            <Map />
+          </div>
         </div>
       </section>
 
