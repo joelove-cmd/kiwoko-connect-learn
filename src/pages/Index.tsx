@@ -119,6 +119,64 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Student Showcase */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">Our Students in Action</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              See our dedicated students from various programs as they prepare to become the next generation of healthcare professionals
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+              <img 
+                src="/lovable-uploads/5921c163-8581-4d91-a9ce-2d6c0e64fa2d.png" 
+                alt="Students in white uniforms outside Resource Centre"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-primary text-center">Ready to Serve</h3>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+              <img 
+                src="/lovable-uploads/54d4530d-c256-4ea6-af00-4887d0bc793e.png" 
+                alt="Female students in green and white uniforms"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-primary text-center">Future Leaders</h3>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+              <img 
+                src="/lovable-uploads/126dbbf1-8682-4ee1-83b4-d5557dc7cfc0.png" 
+                alt="Laboratory technician students in white and blue uniforms"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-primary text-center">Lab Excellence</h3>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+              <img 
+                src="/lovable-uploads/ad9a238f-3b03-4dbe-965f-1c19635de530.png" 
+                alt="Nursing students in blue uniforms with white aprons"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-primary text-center">Compassionate Care</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Programs Section */}
       <section className="py-16 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

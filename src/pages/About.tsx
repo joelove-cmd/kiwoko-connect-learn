@@ -141,6 +141,99 @@ const About = () => {
         </div>
       </section>
 
+      {/* Student Life Gallery */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">Our Student Community</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Meet our dedicated students from our Nursing, Midwifery, and Laboratory Technician programs. 
+              Together, they form a vibrant learning community committed to excellence in healthcare.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/ad9a238f-3b03-4dbe-965f-1c19635de530.png" 
+                  alt="Nursing students in blue uniforms with white aprons"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Nursing Program</h3>
+                  <p className="text-sm text-muted-foreground">Our nursing students ready to provide compassionate care</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/126dbbf1-8682-4ee1-83b4-d5557dc7cfc0.png" 
+                  alt="Students in white polo shirts and blue skirts"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Laboratory Technician Program</h3>
+                  <p className="text-sm text-muted-foreground">Future laboratory professionals in training</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/51848f0e-d38c-41b5-be5b-c340c55c9e0d.png" 
+                  alt="Mixed group of students in front of the Resource Centre"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Academic Excellence</h3>
+                  <p className="text-sm text-muted-foreground">Students at our well-equipped Resource Centre</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/65925656-1a63-4407-905f-36804319c837.png" 
+                  alt="Diverse group of students in different colored uniforms"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Diverse Programs</h3>
+                  <p className="text-sm text-muted-foreground">Students from various healthcare programs</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/cecbbf59-eef7-404e-a411-5e9312d678e0.png" 
+                  alt="Mixed group with instructors in blue and yellow uniforms"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Faculty & Students</h3>
+                  <p className="text-sm text-muted-foreground">Our dedicated faculty with their students</p>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/524f7fa6-8262-4d4e-b8bb-988af483e04f.png" 
+                  alt="Male students in white polo shirts with green trim"
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-primary mb-2">Male Students</h3>
+                  <p className="text-sm text-muted-foreground">Breaking barriers in healthcare education</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Accreditation */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-secondary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -77,6 +77,56 @@ const Courses = () => {
         </div>
       </section>
 
+      {/* Program Highlights */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary mb-4">Meet Our Students</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our students represent the future of healthcare in Uganda. See them in action across our various programs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/cecbbf59-eef7-404e-a411-5e9312d678e0.png" 
+                alt="Mixed group of students with faculty"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-2">Faculty & Student Mentorship</h3>
+                <p className="text-muted-foreground">Our experienced faculty work closely with students, providing guidance and support throughout their academic journey.</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/65925656-1a63-4407-905f-36804319c837.png" 
+                alt="Diverse group of female and male students"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-2">Diverse Learning Community</h3>
+                <p className="text-muted-foreground">Students from different backgrounds come together to learn and grow in our inclusive educational environment.</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/lovable-uploads/524f7fa6-8262-4d4e-b8bb-988af483e04f.png" 
+                alt="Male students in healthcare uniforms"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-primary mb-2">Breaking Gender Barriers</h3>
+                <p className="text-muted-foreground">We encourage and support male students to pursue careers in nursing and healthcare, breaking traditional stereotypes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Programs Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
