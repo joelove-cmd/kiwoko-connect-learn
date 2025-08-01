@@ -148,7 +148,7 @@ const Index = () => {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-4">
-                <h3 className="font-semibold text-primary text-center">Future Leaders</h3>
+                <h3 className="font-semibold text-primary text-center">Lab Excellence</h3>
               </div>
             </div>
             
@@ -159,7 +159,7 @@ const Index = () => {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-4">
-                <h3 className="font-semibold text-primary text-center">Lab Excellence</h3>
+                <h3 className="font-semibold text-primary text-center">Future Leaders</h3>
               </div>
             </div>
             

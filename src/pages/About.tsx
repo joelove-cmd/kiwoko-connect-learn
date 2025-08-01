@@ -213,8 +213,8 @@ const About = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-primary mb-2">Faculty & Students</h3>
-                  <p className="text-sm text-muted-foreground">Our dedicated faculty with their students</p>
+                  <h3 className="font-semibold text-primary mb-2">Lab Seniors</h3>
+                  <p className="text-sm text-muted-foreground">Senior students from our Laboratory Techniques program mentoring junior colleagues</p>
                 </div>
               </div>
               
@@ -225,8 +225,8 @@ const About = () => {
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-primary mb-2">Laboratory Techniques Program</h3>
-                  <p className="text-sm text-muted-foreground">Male students in different colored shirts excelling in medical laboratory training</p>
+                  <h3 className="font-semibold text-primary mb-2">Nursing & Midwifery Seniors</h3>
+                  <p className="text-sm text-muted-foreground">Advanced students preparing for their final clinical rotations in maternal and general healthcare</p>
                 </div>
               </div>
             </div>
