@@ -157,24 +157,24 @@ const About = () => {
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/ad9a238f-3b03-4dbe-965f-1c19635de530.png" 
-                  alt="Nursing students in blue uniforms with white aprons"
+                  alt="Nursing and Midwifery students in blue uniforms with white aprons"
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-primary mb-2">Nursing Program</h3>
-                  <p className="text-sm text-muted-foreground">Our nursing students ready to provide compassionate care</p>
+                  <h3 className="font-semibold text-primary mb-2">Nursing and Midwifery Program</h3>
+                  <p className="text-sm text-muted-foreground">Students in blue and white uniforms ready to provide compassionate care</p>
                 </div>
               </div>
               
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/126dbbf1-8682-4ee1-83b4-d5557dc7cfc0.png" 
-                  alt="Students in white polo shirts and blue skirts"
+                  alt="Laboratory Techniques students in white shirts and blue skirts"
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-primary mb-2">Laboratory Technician Program</h3>
-                  <p className="text-sm text-muted-foreground">Future laboratory professionals in training</p>
+                  <h3 className="font-semibold text-primary mb-2">Laboratory Techniques Program</h3>
+                  <p className="text-sm text-muted-foreground">Students in gray skirts and different colored shirts training in medical laboratory</p>
                 </div>
               </div>
             </div>
@@ -221,12 +221,12 @@ const About = () => {
               <div className="bg-white rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="/lovable-uploads/524f7fa6-8262-4d4e-b8bb-988af483e04f.png" 
-                  alt="Male students in white polo shirts with green trim"
+                  alt="Laboratory Techniques students in white polo shirts with green trim"
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-primary mb-2">Male Students</h3>
-                  <p className="text-sm text-muted-foreground">Breaking barriers in healthcare education</p>
+                  <h3 className="font-semibold text-primary mb-2">Laboratory Techniques Program</h3>
+                  <p className="text-sm text-muted-foreground">Male students in different colored shirts excelling in medical laboratory training</p>
                 </div>
               </div>
             </div>
