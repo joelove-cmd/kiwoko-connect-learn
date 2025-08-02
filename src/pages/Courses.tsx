@@ -190,12 +190,9 @@ const Courses = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-2 pt-4">
-                    <Button asChild className="flex-1">
+                  <div className="flex justify-center pt-4">
+                    <Button asChild>
                       <Link to="/apply">Apply Now</Link>
-                    </Button>
-                    <Button variant="outline" className="flex-1">
-                      Download Brochure
                     </Button>
                   </div>
                 </CardContent>
