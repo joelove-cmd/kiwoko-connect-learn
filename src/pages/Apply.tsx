@@ -10,8 +10,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { FileText, Upload, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Apply = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -72,8 +76,44 @@ const Apply = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Application submitted:", formData);
+    
+    // Validate required fields
+    const requiredFields = [
+      'firstName', 'lastName', 'nationality', 'homeDistrict', 
+      'telephone', 'emailAddress', 'nextOfKinName', 'nextOfKinAddress',
+      'program', 'applicantName'
+    ];
+    
+    const missingFields = requiredFields.filter(field => !formData[field as keyof typeof formData]);
+    
+    if (missingFields.length > 0) {
+      toast({
+        title: "Missing Required Fields",
+        description: "Please fill in all required fields before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!formData.agreeToTerms) {
+      toast({
+        title: "Terms and Conditions",
+        description: "Please agree to the terms and conditions to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Show success message and redirect to payment
+    toast({
+      title: "Application Submitted!",
+      description: "Redirecting to payment page...",
+    });
+
+    // Navigate to payment page with application data
+    navigate("/payment", { 
+      state: { applicationData: formData }
+    });
   };
 
   const handleInputChange = (field: string, value: string) => {
