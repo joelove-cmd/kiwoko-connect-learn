@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { FileText, Upload, CheckCircle, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
@@ -18,11 +19,46 @@ const Apply = () => {
     phone: "",
     dateOfBirth: "",
     gender: "",
-    address: "",
+    nationality: "",
+    homeDistrict: "",
+    telephone: "",
+    emailAddress: "",
+    postalAddress: "",
+    religion: "",
+    maritalStatus: "",
+    numberOfChildren: "",
+    sponsoringBody: "",
+    sponsorContact: "",
+    nextOfKinName: "",
+    nextOfKinAddress: "",
+    howDidYouKnow: "",
+    recruitingAgentPhone: "",
+    recruitingAgentName: "",
+    hasPreExistingCondition: "",
+    medicalCondition: "",
+    uceYear: "",
+    uceSubjects: [
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" },
+      { subject: "", aggregate: "" }
+    ],
+    uceGradeAggregate: "",
+    uceGradeResults: "",
+    uaceYear: "",
+    uaceSubjects: [
+      { subject: "" },
+      { subject: "" },
+      { subject: "" },
+      { subject: "" }
+    ],
+    uaceTotalPoints: "",
     program: "",
-    previousEducation: "",
-    workExperience: "",
-    motivation: "",
+    applicantName: "",
     agreeToTerms: false
   });
 
@@ -73,87 +109,372 @@ const Apply = () => {
                   <p className="text-muted-foreground">Please fill in all required fields to complete your application.</p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Personal Information */}
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    {/* A. PERSONAL INFORMATION */}
                     <div>
-                      <h3 className="text-lg font-semibold mb-4 text-primary">Personal Information</h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <h3 className="text-lg font-semibold mb-6 text-primary">A. PERSONAL INFORMATION</h3>
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <Label htmlFor="firstName">First Name *</Label>
+                            <Input
+                              id="firstName"
+                              value={formData.firstName}
+                              onChange={(e) => handleInputChange("firstName", e.target.value)}
+                              required
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="lastName">Last Name *</Label>
+                            <Input
+                              id="lastName"
+                              value={formData.lastName}
+                              onChange={(e) => handleInputChange("lastName", e.target.value)}
+                              required
+                            />
+                          </div>
+                        </div>
+
                         <div>
-                          <Label htmlFor="firstName">First Name *</Label>
+                          <Label htmlFor="nationality">Nationality *</Label>
                           <Input
-                            id="firstName"
-                            value={formData.firstName}
-                            onChange={(e) => handleInputChange("firstName", e.target.value)}
+                            id="nationality"
+                            value={formData.nationality}
+                            onChange={(e) => handleInputChange("nationality", e.target.value)}
                             required
                           />
                         </div>
+
                         <div>
-                          <Label htmlFor="lastName">Last Name *</Label>
+                          <h4 className="font-medium mb-3">Address</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <Label htmlFor="homeDistrict">Home District *</Label>
+                              <Input
+                                id="homeDistrict"
+                                value={formData.homeDistrict}
+                                onChange={(e) => handleInputChange("homeDistrict", e.target.value)}
+                                required
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="telephone">Telephone *</Label>
+                              <Input
+                                id="telephone"
+                                value={formData.telephone}
+                                onChange={(e) => handleInputChange("telephone", e.target.value)}
+                                required
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="emailAddress">Email Address *</Label>
+                              <Input
+                                id="emailAddress"
+                                type="email"
+                                value={formData.emailAddress}
+                                onChange={(e) => handleInputChange("emailAddress", e.target.value)}
+                                required
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="postalAddress">Postal Address</Label>
+                              <Input
+                                id="postalAddress"
+                                value={formData.postalAddress}
+                                onChange={(e) => handleInputChange("postalAddress", e.target.value)}
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <Label htmlFor="religion">Religion</Label>
+                            <Input
+                              id="religion"
+                              value={formData.religion}
+                              onChange={(e) => handleInputChange("religion", e.target.value)}
+                            />
+                          </div>
+                          <div>
+                            <Label htmlFor="maritalStatus">Marital Status</Label>
+                            <Select onValueChange={(value) => handleInputChange("maritalStatus", value)}>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select marital status" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="single">Single</SelectItem>
+                                <SelectItem value="married">Married</SelectItem>
+                                <SelectItem value="divorced">Divorced</SelectItem>
+                                <SelectItem value="widowed">Widowed</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </div>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="numberOfChildren">Number of Children (if any)</Label>
                           <Input
-                            id="lastName"
-                            value={formData.lastName}
-                            onChange={(e) => handleInputChange("lastName", e.target.value)}
+                            id="numberOfChildren"
+                            type="number"
+                            value={formData.numberOfChildren}
+                            onChange={(e) => handleInputChange("numberOfChildren", e.target.value)}
+                            min="0"
+                          />
+                        </div>
+
+                        <div>
+                          <h4 className="font-medium mb-3">Sponsoring Body / Person</h4>
+                          <div className="space-y-3">
+                            <div className="flex items-center space-x-6">
+                              <Label className="flex items-center space-x-2">
+                                <Checkbox />
+                                <span>Private (Self / Parent / Guardian)</span>
+                              </Label>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div>
+                                <Label htmlFor="sponsoringBody">Sponsoring Body/Person</Label>
+                                <Input
+                                  id="sponsoringBody"
+                                  value={formData.sponsoringBody}
+                                  onChange={(e) => handleInputChange("sponsoringBody", e.target.value)}
+                                />
+                              </div>
+                              <div>
+                                <Label htmlFor="sponsorContact">Contact</Label>
+                                <Input
+                                  id="sponsorContact"
+                                  value={formData.sponsorContact}
+                                  onChange={(e) => handleInputChange("sponsorContact", e.target.value)}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="nextOfKinName">Next of Kin (Name) *</Label>
+                          <Input
+                            id="nextOfKinName"
+                            value={formData.nextOfKinName}
+                            onChange={(e) => handleInputChange("nextOfKinName", e.target.value)}
                             required
                           />
                         </div>
+
                         <div>
-                          <Label htmlFor="email">Email Address *</Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={(e) => handleInputChange("email", e.target.value)}
+                          <Label htmlFor="nextOfKinAddress">Address of Next of Kin (include Tel no.) *</Label>
+                          <Textarea
+                            id="nextOfKinAddress"
+                            value={formData.nextOfKinAddress}
+                            onChange={(e) => handleInputChange("nextOfKinAddress", e.target.value)}
+                            placeholder="Include telephone number"
                             required
                           />
                         </div>
+
                         <div>
-                          <Label htmlFor="phone">Phone Number *</Label>
+                          <Label htmlFor="howDidYouKnow">How did you get to know about this school?</Label>
                           <Input
-                            id="phone"
-                            value={formData.phone}
-                            onChange={(e) => handleInputChange("phone", e.target.value)}
-                            required
+                            id="howDidYouKnow"
+                            value={formData.howDidYouKnow}
+                            onChange={(e) => handleInputChange("howDidYouKnow", e.target.value)}
                           />
                         </div>
+
                         <div>
-                          <Label htmlFor="dateOfBirth">Date of Birth *</Label>
-                          <Input
-                            id="dateOfBirth"
-                            type="date"
-                            value={formData.dateOfBirth}
-                            onChange={(e) => handleInputChange("dateOfBirth", e.target.value)}
-                            required
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="gender">Gender *</Label>
-                          <Select onValueChange={(value) => handleInputChange("gender", value)}>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select gender" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="male">Male</SelectItem>
-                              <SelectItem value="female">Female</SelectItem>
-                              <SelectItem value="other">Other</SelectItem>
-                            </SelectContent>
-                          </Select>
+                          <h4 className="font-medium mb-3">Recruiting Agent Information</h4>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <Label htmlFor="recruitingAgentPhone">Recruiting Agent Phone Number</Label>
+                              <Input
+                                id="recruitingAgentPhone"
+                                value={formData.recruitingAgentPhone}
+                                onChange={(e) => handleInputChange("recruitingAgentPhone", e.target.value)}
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="recruitingAgentName">Name</Label>
+                              <Input
+                                id="recruitingAgentName"
+                                value={formData.recruitingAgentName}
+                                onChange={(e) => handleInputChange("recruitingAgentName", e.target.value)}
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className="mt-4">
-                        <Label htmlFor="address">Address *</Label>
-                        <Textarea
-                          id="address"
-                          value={formData.address}
-                          onChange={(e) => handleInputChange("address", e.target.value)}
-                          placeholder="Enter your full address"
-                          required
-                        />
+                    </div>
+
+                    {/* B. MEDICAL INFORMATION */}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-6 text-primary">B. MEDICAL INFORMATION</h3>
+                      <div className="space-y-4">
+                        <div>
+                          <Label className="text-base font-medium">1. Do you have any pre-existing medical condition(s)?</Label>
+                          <RadioGroup 
+                            value={formData.hasPreExistingCondition} 
+                            onValueChange={(value) => handleInputChange("hasPreExistingCondition", value)}
+                            className="flex space-x-6 mt-2"
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="yes" id="yes" />
+                              <Label htmlFor="yes">Yes</Label>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="no" id="no" />
+                              <Label htmlFor="no">No</Label>
+                            </div>
+                          </RadioGroup>
+                        </div>
+
+                        {formData.hasPreExistingCondition === "yes" && (
+                          <div>
+                            <Label htmlFor="medicalCondition">2. If yes above, State the condition</Label>
+                            <Textarea
+                              id="medicalCondition"
+                              value={formData.medicalCondition}
+                              onChange={(e) => handleInputChange("medicalCondition", e.target.value)}
+                              placeholder="Please describe your medical condition(s)"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* C. ACADEMIC INFORMATION */}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-6 text-primary">C. ACADEMIC INFORMATION</h3>
+                      
+                      {/* UCE/O-Level */}
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-medium mb-3">1. Uganda Certificate of Education (UCE) / "O" Level</h4>
+                          <div className="mb-4">
+                            <Label htmlFor="uceYear">Year of sitting</Label>
+                            <Input
+                              id="uceYear"
+                              value={formData.uceYear}
+                              onChange={(e) => handleInputChange("uceYear", e.target.value)}
+                              placeholder="e.g., 2020"
+                            />
+                          </div>
+                          
+                          <div className="overflow-x-auto">
+                            <table className="w-full border-collapse border border-border">
+                              <thead>
+                                <tr>
+                                  <th className="border border-border p-2 bg-muted text-left">SUBJECT</th>
+                                  <th className="border border-border p-2 bg-muted text-left">AGGREGATE</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {formData.uceSubjects.map((subject, index) => (
+                                  <tr key={index}>
+                                    <td className="border border-border p-2">
+                                      <Input
+                                        value={subject.subject}
+                                        onChange={(e) => {
+                                          const newSubjects = [...formData.uceSubjects];
+                                          newSubjects[index].subject = e.target.value;
+                                          setFormData(prev => ({ ...prev, uceSubjects: newSubjects }));
+                                        }}
+                                        placeholder="Subject name"
+                                      />
+                                    </td>
+                                    <td className="border border-border p-2">
+                                      <Input
+                                        value={subject.aggregate}
+                                        onChange={(e) => {
+                                          const newSubjects = [...formData.uceSubjects];
+                                          newSubjects[index].aggregate = e.target.value;
+                                          setFormData(prev => ({ ...prev, uceSubjects: newSubjects }));
+                                        }}
+                                        placeholder="Grade"
+                                      />
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                              <Label htmlFor="uceGradeAggregate">Grade Aggregate</Label>
+                              <Input
+                                id="uceGradeAggregate"
+                                value={formData.uceGradeAggregate}
+                                onChange={(e) => handleInputChange("uceGradeAggregate", e.target.value)}
+                              />
+                            </div>
+                            <div>
+                              <Label htmlFor="uceGradeResults">Grade Results</Label>
+                              <Input
+                                id="uceGradeResults"
+                                value={formData.uceGradeResults}
+                                onChange={(e) => handleInputChange("uceGradeResults", e.target.value)}
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* UACE/A-Level */}
+                        <div>
+                          <h4 className="font-medium mb-3">2. Uganda Advanced Certificate of Education (UACE) / 'A' Level [if applicable]</h4>
+                          <div className="mb-4">
+                            <Label htmlFor="uaceYear">Year of sitting</Label>
+                            <Input
+                              id="uaceYear"
+                              value={formData.uaceYear}
+                              onChange={(e) => handleInputChange("uaceYear", e.target.value)}
+                              placeholder="e.g., 2022"
+                            />
+                          </div>
+                          
+                          <div className="overflow-x-auto">
+                            <table className="w-full border-collapse border border-border">
+                              <thead>
+                                <tr>
+                                  <th className="border border-border p-2 bg-muted text-left">SUBJECT</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {formData.uaceSubjects.map((subject, index) => (
+                                  <tr key={index}>
+                                    <td className="border border-border p-2">
+                                      <Input
+                                        value={subject.subject}
+                                        onChange={(e) => {
+                                          const newSubjects = [...formData.uaceSubjects];
+                                          newSubjects[index].subject = e.target.value;
+                                          setFormData(prev => ({ ...prev, uaceSubjects: newSubjects }));
+                                        }}
+                                        placeholder="Subject name"
+                                      />
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div className="mt-4">
+                            <Label htmlFor="uaceTotalPoints">Total Points</Label>
+                            <Input
+                              id="uaceTotalPoints"
+                              value={formData.uaceTotalPoints}
+                              onChange={(e) => handleInputChange("uaceTotalPoints", e.target.value)}
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     {/* Program Selection */}
                     <div>
-                      <h3 className="text-lg font-semibold mb-4 text-primary">Program Selection</h3>
+                      <h3 className="text-lg font-semibold mb-6 text-primary">Program Selection</h3>
                       <div>
                         <Label htmlFor="program">Desired Program *</Label>
                         <Select onValueChange={(value) => handleInputChange("program", value)}>
@@ -169,52 +490,35 @@ const Apply = () => {
                       </div>
                     </div>
 
-                    {/* Education Background */}
-                    <div>
-                      <h3 className="text-lg font-semibold mb-4 text-primary">Education & Experience</h3>
+                    {/* Declaration */}
+                    <div className="border-t pt-6">
+                      <h3 className="text-lg font-semibold mb-4 text-primary">Declaration</h3>
                       <div className="space-y-4">
+                        <p className="text-sm text-muted-foreground">
+                          I hereby certify to the best of my knowledge that the particulars given in this form are true and complete in all aspects.
+                        </p>
+                        
                         <div>
-                          <Label htmlFor="previousEducation">Previous Education *</Label>
-                          <Textarea
-                            id="previousEducation"
-                            value={formData.previousEducation}
-                            onChange={(e) => handleInputChange("previousEducation", e.target.value)}
-                            placeholder="List your educational qualifications (O-Level, A-Level, certificates, etc.)"
+                          <Label htmlFor="applicantName">Name of the applicant *</Label>
+                          <Input
+                            id="applicantName"
+                            value={formData.applicantName}
+                            onChange={(e) => handleInputChange("applicantName", e.target.value)}
                             required
                           />
                         </div>
-                        <div>
-                          <Label htmlFor="workExperience">Work Experience (if any)</Label>
-                          <Textarea
-                            id="workExperience"
-                            value={formData.workExperience}
-                            onChange={(e) => handleInputChange("workExperience", e.target.value)}
-                            placeholder="Describe any relevant work experience"
+
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            id="terms"
+                            checked={formData.agreeToTerms}
+                            onCheckedChange={(checked) => setFormData(prev => ({ ...prev, agreeToTerms: !!checked }))}
                           />
-                        </div>
-                        <div>
-                          <Label htmlFor="motivation">Why do you want to pursue this program? *</Label>
-                          <Textarea
-                            id="motivation"
-                            value={formData.motivation}
-                            onChange={(e) => handleInputChange("motivation", e.target.value)}
-                            placeholder="Tell us about your motivation and career goals"
-                            required
-                          />
+                          <Label htmlFor="terms" className="text-sm">
+                            I certify that the information provided is true and complete, and I agree to the terms and conditions. *
+                          </Label>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Terms and Conditions */}
-                    <div className="flex items-center space-x-2">
-                      <Checkbox
-                        id="terms"
-                        checked={formData.agreeToTerms}
-                        onCheckedChange={(checked) => setFormData(prev => ({ ...prev, agreeToTerms: !!checked }))}
-                      />
-                      <Label htmlFor="terms" className="text-sm">
-                        I agree to the terms and conditions and consent to the processing of my personal data for admission purposes. *
-                      </Label>
                     </div>
 
                     <Button type="submit" className="w-full" size="lg" disabled={!formData.agreeToTerms}>
@@ -239,11 +543,7 @@ const Apply = () => {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      Copy of National ID or Passport
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      Academic transcripts (O-Level, A-Level)
+                      Academic testimonials / pass slips / certificates
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -251,15 +551,19 @@ const Apply = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      Passport-size photographs (2)
+                      Marriage certificate [if married]
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      Medical certificate
+                      Recommendation letter from sponsoring body [if applicable]
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      Character reference letter
+                      LC letter (original)
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      Recognized ID
                     </li>
                   </ul>
                   <p className="text-xs text-muted-foreground mt-4">
