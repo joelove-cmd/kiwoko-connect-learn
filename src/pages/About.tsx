@@ -253,7 +253,10 @@ const About = () => {
               <h3 className="font-semibold text-primary mb-2">Ministry of Health</h3>
               <p className="text-sm text-muted-foreground">Licensed Institution</p>
             </div>
-            
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="font-semibold text-primary mb-2">EAC Recognition</h3>
+              <p className="text-sm text-muted-foreground">Regional Standards</p>
+            </div>
           </div>
         </div>
       </section>
