@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FileText, Upload, CheckCircle, AlertCircle, CreditCard, Smartphone } from "lucide-react";
+import { FileText, Upload, CheckCircle, AlertCircle, CreditCard, Smartphone, X, File } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -68,6 +68,15 @@ const Apply = () => {
     program: "",
     applicantName: "",
     agreeToTerms: false
+  });
+
+  const [uploadedDocuments, setUploadedDocuments] = useState<{[key: string]: File | null}>({
+    academicDocuments: null,
+    birthCertificate: null,
+    marriageCertificate: null,
+    recommendationLetter: null,
+    lcLetter: null,
+    nationalId: null,
   });
 
   const programs = [
@@ -161,6 +170,22 @@ const Apply = () => {
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleFileUpload = (documentType: string, file: File) => {
+    setUploadedDocuments(prev => ({ ...prev, [documentType]: file }));
+    toast({
+      title: "Document Uploaded",
+      description: `${file.name} has been uploaded successfully.`,
+    });
+  };
+
+  const removeDocument = (documentType: string) => {
+    setUploadedDocuments(prev => ({ ...prev, [documentType]: null }));
+    toast({
+      title: "Document Removed",
+      description: "Document has been removed successfully.",
+    });
   };
 
   return (
@@ -570,6 +595,280 @@ const Apply = () => {
                             ))}
                           </SelectContent>
                         </Select>
+                      </div>
+                    </div>
+
+                    {/* Document Uploads */}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-6 text-primary">Document Uploads</h3>
+                      <p className="text-muted-foreground mb-6">
+                        Upload the required documents in PDF, JPG, or PNG format. Maximum file size: 5MB per document.
+                      </p>
+                      
+                      <div className="space-y-6">
+                        {/* Academic Documents */}
+                        <div>
+                          <Label className="text-base font-medium">Academic Documents (Certificates/Transcripts) *</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.academicDocuments ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.academicDocuments.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('academicDocuments')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your academic documents
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('academicDocuments', file);
+                                  }}
+                                  className="hidden"
+                                  id="academicDocuments"
+                                />
+                                <Label htmlFor="academicDocuments" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Birth Certificate */}
+                        <div>
+                          <Label className="text-base font-medium">Birth Certificate *</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.birthCertificate ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.birthCertificate.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('birthCertificate')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your birth certificate
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('birthCertificate', file);
+                                  }}
+                                  className="hidden"
+                                  id="birthCertificate"
+                                />
+                                <Label htmlFor="birthCertificate" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Marriage Certificate */}
+                        <div>
+                          <Label className="text-base font-medium">Marriage Certificate (if married)</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.marriageCertificate ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.marriageCertificate.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('marriageCertificate')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your marriage certificate
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('marriageCertificate', file);
+                                  }}
+                                  className="hidden"
+                                  id="marriageCertificate"
+                                />
+                                <Label htmlFor="marriageCertificate" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Recommendation Letter */}
+                        <div>
+                          <Label className="text-base font-medium">Recommendation Letter (if applicable)</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.recommendationLetter ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.recommendationLetter.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('recommendationLetter')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your recommendation letter
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('recommendationLetter', file);
+                                  }}
+                                  className="hidden"
+                                  id="recommendationLetter"
+                                />
+                                <Label htmlFor="recommendationLetter" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* LC Letter */}
+                        <div>
+                          <Label className="text-base font-medium">LC Letter (Original) *</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.lcLetter ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.lcLetter.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('lcLetter')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your LC letter
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('lcLetter', file);
+                                  }}
+                                  className="hidden"
+                                  id="lcLetter"
+                                />
+                                <Label htmlFor="lcLetter" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* National ID */}
+                        <div>
+                          <Label className="text-base font-medium">National ID/Passport *</Label>
+                          <div className="mt-2">
+                            {uploadedDocuments.nationalId ? (
+                              <div className="flex items-center justify-between p-3 border border-green-200 bg-green-50 rounded-lg">
+                                <div className="flex items-center">
+                                  <File className="h-5 w-5 text-green-600 mr-2" />
+                                  <span className="text-sm font-medium">{uploadedDocuments.nationalId.name}</span>
+                                </div>
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={() => removeDocument('nationalId')}
+                                >
+                                  <X className="h-4 w-4" />
+                                </Button>
+                              </div>
+                            ) : (
+                              <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
+                                <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                                <p className="text-sm text-muted-foreground mb-2">
+                                  Click to upload your national ID or passport
+                                </p>
+                                <input
+                                  type="file"
+                                  accept=".pdf,.jpg,.jpeg,.png"
+                                  onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleFileUpload('nationalId', file);
+                                  }}
+                                  className="hidden"
+                                  id="nationalId"
+                                />
+                                <Label htmlFor="nationalId" className="cursor-pointer">
+                                  <Button variant="outline" size="sm" type="button">
+                                    Choose File
+                                  </Button>
+                                </Label>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </div>
                     </div>
 
