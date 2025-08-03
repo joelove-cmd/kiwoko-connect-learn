@@ -18,6 +18,7 @@ const Apply = () => {
   const { toast } = useToast();
   const [paymentCompleted, setPaymentCompleted] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -660,11 +661,30 @@ const Apply = () => {
                         </RadioGroup>
                       </div>
 
+                      {/* Phone Number Input for Mobile Money */}
+                      {(paymentMethod === "mtn" || paymentMethod === "airtel") && (
+                        <div className="space-y-2">
+                          <Label htmlFor="phoneNumber">Phone Number</Label>
+                          <Input
+                            id="phoneNumber"
+                            type="tel"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            placeholder="Enter your phone number"
+                            className="w-full"
+                          />
+                        </div>
+                      )}
+
                       <Button 
                         onClick={handlePayment}
                         className="w-full" 
                         size="lg"
-                        disabled={!paymentMethod || isProcessingPayment}
+                        disabled={
+                          !paymentMethod || 
+                          isProcessingPayment || 
+                          ((paymentMethod === "mtn" || paymentMethod === "airtel") && !phoneNumber.trim())
+                        }
                       >
                         {isProcessingPayment ? "Processing Payment..." : "Pay UGX 50,000"}
                       </Button>
