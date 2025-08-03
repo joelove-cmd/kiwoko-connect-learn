@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { FileText, Upload, CheckCircle, AlertCircle } from "lucide-react";
+import { FileText, Upload, CheckCircle, AlertCircle, CreditCard, Smartphone } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -16,6 +16,9 @@ import { useToast } from "@/hooks/use-toast";
 const Apply = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const [paymentCompleted, setPaymentCompleted] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -74,8 +77,49 @@ const Apply = () => {
     "Certificate in Medical Laboratory Techniques (2 years)"
   ];
 
+  const handlePayment = async () => {
+    if (!paymentMethod) {
+      toast({
+        title: "Payment Method Required",
+        description: "Please select a payment method to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsProcessingPayment(true);
+    
+    try {
+      // Simulate payment processing
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      
+      setPaymentCompleted(true);
+      toast({
+        title: "Payment Successful!",
+        description: "Your application fee has been processed. You can now submit your application.",
+      });
+    } catch (error) {
+      toast({
+        title: "Payment Failed",
+        description: "There was an error processing your payment. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsProcessingPayment(false);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!paymentCompleted) {
+      toast({
+        title: "Payment Required",
+        description: "Please complete the payment before submitting your application.",
+        variant: "destructive",
+      });
+      return;
+    }
     
     // Validate required fields
     const requiredFields = [
@@ -104,16 +148,14 @@ const Apply = () => {
       return;
     }
 
-    // Show success message and redirect to payment
+    // Show success message
     toast({
-      title: "Application Submitted!",
-      description: "Redirecting to payment page...",
+      title: "Application Submitted Successfully!",
+      description: "Your application has been received. You will receive a confirmation email shortly.",
     });
 
-    // Navigate to payment page with application data
-    navigate("/payment", { 
-      state: { applicationData: formData }
-    });
+    // Navigate back to home or success page
+    navigate("/", { replace: true });
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -561,8 +603,13 @@ const Apply = () => {
                       </div>
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg" disabled={!formData.agreeToTerms}>
-                      Submit Application
+                    <Button 
+                      type="submit" 
+                      className="w-full" 
+                      size="lg" 
+                      disabled={!formData.agreeToTerms || !paymentCompleted}
+                    >
+                      {paymentCompleted ? "Submit Application" : "Payment Required First"}
                     </Button>
                   </form>
                 </CardContent>
@@ -571,6 +618,73 @@ const Apply = () => {
 
             {/* Sidebar */}
             <div className="space-y-6">
+              {/* Payment Section */}
+              <Card className={paymentCompleted ? "border-green-500 bg-green-50" : ""}>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <CreditCard className="h-5 w-5 mr-2" />
+                    Application Fee Payment
+                    {paymentCompleted && <CheckCircle className="h-5 w-5 ml-2 text-green-500" />}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {!paymentCompleted ? (
+                    <>
+                      <div className="text-center">
+                        <p className="text-2xl font-bold text-primary">UGX 50,000</p>
+                        <p className="text-sm text-muted-foreground">Application Fee</p>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <Label className="text-base font-medium">Select Payment Method</Label>
+                        <RadioGroup 
+                          value={paymentMethod} 
+                          onValueChange={setPaymentMethod}
+                          className="space-y-2"
+                        >
+                          <div className="flex items-center space-x-3 p-3 border rounded-lg">
+                            <RadioGroupItem value="mtn" id="mtn" />
+                            <Smartphone className="h-5 w-5 text-yellow-500" />
+                            <Label htmlFor="mtn">MTN Mobile Money</Label>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-lg">
+                            <RadioGroupItem value="airtel" id="airtel" />
+                            <Smartphone className="h-5 w-5 text-red-500" />
+                            <Label htmlFor="airtel">Airtel Money</Label>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 border rounded-lg">
+                            <RadioGroupItem value="card" id="card" />
+                            <CreditCard className="h-5 w-5 text-primary" />
+                            <Label htmlFor="card">Credit/Debit Card</Label>
+                          </div>
+                        </RadioGroup>
+                      </div>
+
+                      <Button 
+                        onClick={handlePayment}
+                        className="w-full" 
+                        size="lg"
+                        disabled={!paymentMethod || isProcessingPayment}
+                      >
+                        {isProcessingPayment ? "Processing Payment..." : "Pay UGX 50,000"}
+                      </Button>
+
+                      <p className="text-xs text-muted-foreground text-center">
+                        You must complete payment before submitting your application
+                      </p>
+                    </>
+                  ) : (
+                    <div className="text-center space-y-2">
+                      <CheckCircle className="h-12 w-12 text-green-500 mx-auto" />
+                      <p className="font-semibold text-green-700">Payment Completed!</p>
+                      <p className="text-sm text-muted-foreground">
+                        You can now submit your application form
+                      </p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+
               {/* Required Documents */}
               <Card>
                 <CardHeader>
