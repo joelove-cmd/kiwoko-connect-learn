@@ -341,8 +341,8 @@ const PaymentStep = ({
               If you experience any payment issues, contact our support team.
             </p>
             <div className="space-y-2 text-sm">
-              <p><strong>Phone:</strong> +256 123 456 789</p>
-              <p><strong>Email:</strong> support@kiwoko.ac.ug</p>
+              <p><strong>Phone:</strong> +256 0392 912059</p>
+              <p><strong>Email:</strong> principalnmts@kiwokohospital.com</p>
               <p><strong>Office Hours:</strong> Mon-Fri, 8:00 AM - 5:00 PM</p>
             </div>
           </CardContent>
