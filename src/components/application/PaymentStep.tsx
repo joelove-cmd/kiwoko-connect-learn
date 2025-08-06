@@ -3,16 +3,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { CreditCard, Smartphone, CheckCircle } from "lucide-react";
+import { CreditCard, Smartphone, CheckCircle, Upload, ExternalLink, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useState, useRef } from "react";
 
 interface PaymentStepProps {
   paymentCompleted: boolean;
   paymentMethod: string;
   phoneNumber: string;
   isProcessingPayment: boolean;
+  paymentScreenshot: File | null;
   setPaymentMethod: (method: string) => void;
   setPhoneNumber: (phone: string) => void;
+  setPaymentScreenshot: (file: File | null) => void;
   handlePayment: () => void;
   onNext: () => void;
   onPrevious: () => void;
@@ -22,27 +25,78 @@ const PaymentStep = ({
   paymentCompleted, 
   paymentMethod, 
   phoneNumber, 
-  isProcessingPayment, 
+  isProcessingPayment,
+  paymentScreenshot,
   setPaymentMethod, 
-  setPhoneNumber, 
+  setPhoneNumber,
+  setPaymentScreenshot,
   handlePayment, 
   onNext, 
   onPrevious 
 }: PaymentStepProps) => {
   const { toast } = useToast();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [hasInitiatedPayment, setHasInitiatedPayment] = useState(false);
 
-  const handlePaymentAndNext = async () => {
-    if (!paymentCompleted) {
-      if (!paymentMethod) {
+  const handleMobilePayment = () => {
+    if (!paymentMethod) {
+      toast({
+        title: "Payment Method Required",
+        description: "Please select a payment method to continue.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (paymentMethod === "mtn") {
+      window.open("tel:*165*4*3*2*1*1010143633*60000#", "_self");
+    } else if (paymentMethod === "airtel") {
+      window.open("tel:*185*4*3*2*1*1010143633*60000#", "_self");
+    }
+
+    setHasInitiatedPayment(true);
+    toast({
+      title: "Payment Initiated",
+      description: "Please complete the payment and upload a screenshot of the confirmation message.",
+    });
+  };
+
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.type.startsWith('image/')) {
+        setPaymentScreenshot(file);
         toast({
-          title: "Payment Method Required",
-          description: "Please select a payment method to continue.",
+          title: "Screenshot Uploaded",
+          description: "Payment screenshot uploaded successfully.",
+        });
+      } else {
+        toast({
+          title: "Invalid File Type",
+          description: "Please upload an image file.",
           variant: "destructive",
         });
-        return;
       }
-      await handlePayment();
     }
+  };
+
+  const removeScreenshot = () => {
+    setPaymentScreenshot(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const handleCompletePayment = async () => {
+    if (!paymentScreenshot) {
+      toast({
+        title: "Screenshot Required",
+        description: "Please upload a payment screenshot to proceed.",
+        variant: "destructive",
+      });
+      return;
+    }
+    await handlePayment();
   };
 
   return (
@@ -77,45 +131,133 @@ const PaymentStep = ({
                     <Smartphone className="h-5 w-5 text-red-500" />
                     <Label htmlFor="airtel">Airtel Money</Label>
                   </div>
-                  <div className="flex items-center space-x-3 p-3 border rounded-lg">
-                    <RadioGroupItem value="card" id="card" />
-                    <CreditCard className="h-5 w-5 text-primary" />
-                    <Label htmlFor="card">Credit/Debit Card</Label>
-                  </div>
+                   <div className="flex items-center space-x-3 p-3 border rounded-lg">
+                     <RadioGroupItem value="schoolpay" id="schoolpay" />
+                     <CreditCard className="h-5 w-5 text-blue-500" />
+                     <Label htmlFor="schoolpay">School Pay</Label>
+                   </div>
+                   <div className="flex items-center space-x-3 p-3 border rounded-lg">
+                     <RadioGroupItem value="card" id="card" />
+                     <CreditCard className="h-5 w-5 text-primary" />
+                     <Label htmlFor="card">Credit/Debit Card</Label>
+                   </div>
                 </RadioGroup>
               </div>
 
-              {/* Phone Number Input for Mobile Money */}
-              {(paymentMethod === "mtn" || paymentMethod === "airtel") && (
-                <div className="space-y-2">
-                  <Label htmlFor="phoneNumber">Phone Number</Label>
-                  <Input
-                    id="phoneNumber"
-                    type="tel"
-                    value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    placeholder="Enter your phone number"
-                    className="w-full"
-                  />
-                </div>
-              )}
+               {/* Payment Instructions */}
+               {paymentMethod === "schoolpay" && (
+                 <div className="space-y-2 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                   <p className="font-medium text-blue-900">School Pay Instructions:</p>
+                   <p className="text-blue-800 text-sm">
+                     Use student code: <span className="font-mono bg-blue-100 px-2 py-1 rounded">1010143633</span>
+                   </p>
+                   <p className="text-blue-700 text-xs">
+                     Visit any School Pay agent or use the School Pay app to make payment.
+                   </p>
+                 </div>
+               )}
 
-              <Button 
-                onClick={handlePaymentAndNext}
-                className="w-full" 
-                size="lg"
-                disabled={
-                  !paymentMethod || 
-                  isProcessingPayment || 
-                  ((paymentMethod === "mtn" || paymentMethod === "airtel") && !phoneNumber.trim())
-                }
-              >
-                {isProcessingPayment ? "Processing Payment..." : "Pay UGX 50,000"}
-              </Button>
+               {/* Mobile Money Payment Buttons */}
+               {(paymentMethod === "mtn" || paymentMethod === "airtel") && !hasInitiatedPayment && (
+                 <div className="space-y-4">
+                   <Button 
+                     onClick={handleMobilePayment}
+                     className="w-full" 
+                     size="lg"
+                     variant="outline"
+                   >
+                     <ExternalLink className="h-4 w-4 mr-2" />
+                     Dial {paymentMethod === "mtn" ? "*165*4*3*2*1*1010143633*60000#" : "*185*4*3*2*1*1010143633*60000#"}
+                   </Button>
+                   <p className="text-xs text-muted-foreground text-center">
+                     This will open your phone's dialer with the payment code
+                   </p>
+                 </div>
+               )}
 
-              <p className="text-xs text-muted-foreground text-center">
-                You must complete payment before proceeding to the final step
-              </p>
+               {/* Screenshot Upload Section */}
+               {(hasInitiatedPayment || paymentMethod === "schoolpay") && paymentMethod !== "card" && (
+                 <div className="space-y-4">
+                   <div className="space-y-2">
+                     <Label>Upload Payment Screenshot</Label>
+                     <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                       {!paymentScreenshot ? (
+                         <div>
+                           <Upload className="h-8 w-8 mx-auto text-gray-400 mb-2" />
+                           <p className="text-sm text-gray-600 mb-2">
+                             Upload a screenshot of your payment confirmation
+                           </p>
+                           <Button 
+                             type="button" 
+                             variant="outline" 
+                             onClick={() => fileInputRef.current?.click()}
+                           >
+                             Choose File
+                           </Button>
+                           <input
+                             ref={fileInputRef}
+                             type="file"
+                             accept="image/*"
+                             onChange={handleFileUpload}
+                             className="hidden"
+                           />
+                         </div>
+                       ) : (
+                         <div className="space-y-2">
+                           <div className="flex items-center justify-center space-x-2">
+                             <CheckCircle className="h-5 w-5 text-green-500" />
+                             <span className="text-sm font-medium">{paymentScreenshot.name}</span>
+                             <Button
+                               type="button"
+                               variant="ghost"
+                               size="sm"
+                               onClick={removeScreenshot}
+                             >
+                               <X className="h-4 w-4" />
+                             </Button>
+                           </div>
+                           <p className="text-xs text-green-600">Screenshot uploaded successfully</p>
+                         </div>
+                       )}
+                     </div>
+                   </div>
+                 </div>
+               )}
+
+               {/* Complete Payment Button */}
+               {((hasInitiatedPayment && (paymentMethod === "mtn" || paymentMethod === "airtel")) || 
+                 paymentMethod === "schoolpay" || 
+                 paymentMethod === "card") && (
+                 <Button 
+                   onClick={paymentMethod === "card" ? handlePayment : handleCompletePayment}
+                   className="w-full" 
+                   size="lg"
+                   disabled={
+                     isProcessingPayment || 
+                     ((paymentMethod === "mtn" || paymentMethod === "airtel" || paymentMethod === "schoolpay") && !paymentScreenshot)
+                   }
+                 >
+                   {isProcessingPayment ? "Processing Payment..." : "Complete Payment"}
+                 </Button>
+               )}
+
+               {!hasInitiatedPayment && (paymentMethod === "mtn" || paymentMethod === "airtel") && (
+                 <p className="text-xs text-muted-foreground text-center">
+                   Click the dial button above to initiate payment, then upload a screenshot
+                 </p>
+               )}
+               
+               {paymentMethod === "schoolpay" && (
+                 <p className="text-xs text-muted-foreground text-center">
+                   Complete your School Pay transaction and upload a screenshot to proceed
+                 </p>
+               )}
+               
+               {paymentMethod === "card" && (
+                 <p className="text-xs text-muted-foreground text-center">
+                   You must complete payment before proceeding to the final step
+                 </p>
+               )}
             </>
           ) : (
             <div className="text-center space-y-4">

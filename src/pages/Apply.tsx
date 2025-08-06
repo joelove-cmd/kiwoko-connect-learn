@@ -17,6 +17,7 @@ const Apply = () => {
   const [paymentCompleted, setPaymentCompleted] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [paymentScreenshot, setPaymentScreenshot] = useState<File | null>(null);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   
   const [formData, setFormData] = useState({
@@ -214,17 +215,19 @@ const Apply = () => {
         );
       case 3:
         return (
-          <PaymentStep
-            paymentCompleted={paymentCompleted}
-            paymentMethod={paymentMethod}
-            phoneNumber={phoneNumber}
-            isProcessingPayment={isProcessingPayment}
-            setPaymentMethod={setPaymentMethod}
-            setPhoneNumber={setPhoneNumber}
-            handlePayment={handlePayment}
-            onNext={nextStep}
-            onPrevious={prevStep}
-          />
+           <PaymentStep
+             paymentCompleted={paymentCompleted}
+             paymentMethod={paymentMethod}
+             phoneNumber={phoneNumber}
+             paymentScreenshot={paymentScreenshot}
+             isProcessingPayment={isProcessingPayment}
+             setPaymentMethod={setPaymentMethod}
+             setPhoneNumber={setPhoneNumber}
+             setPaymentScreenshot={setPaymentScreenshot}
+             handlePayment={handlePayment}
+             onNext={nextStep}
+             onPrevious={prevStep}
+           />
         );
       case 4:
         return (
