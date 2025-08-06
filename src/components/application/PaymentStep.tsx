@@ -137,9 +137,9 @@ const PaymentStep = ({
                      <Label htmlFor="schoolpay">School Pay</Label>
                    </div>
                    <div className="flex items-center space-x-3 p-3 border rounded-lg">
-                     <RadioGroupItem value="card" id="card" />
-                     <CreditCard className="h-5 w-5 text-primary" />
-                     <Label htmlFor="card">Credit/Debit Card</Label>
+                     <RadioGroupItem value="bank" id="bank" />
+                     <CreditCard className="h-5 w-5 text-green-500" />
+                     <Label htmlFor="bank">Bank Transfer</Label>
                    </div>
                 </RadioGroup>
               </div>
@@ -157,8 +157,23 @@ const PaymentStep = ({
                  </div>
                )}
 
+               {paymentMethod === "bank" && (
+                 <div className="space-y-2 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+                   <p className="font-medium text-green-900">Bank Transfer Instructions:</p>
+                   <p className="text-green-800 text-sm">
+                     Bank: <span className="font-semibold">Stanbic Bank</span>
+                   </p>
+                   <p className="text-green-800 text-sm">
+                     Account Number: <span className="font-mono bg-green-100 px-2 py-1 rounded">9030006384993</span>
+                   </p>
+                   <p className="text-green-700 text-xs">
+                     Make the transfer and upload a screenshot of the transaction confirmation.
+                   </p>
+                 </div>
+               )}
+
                {/* Mobile Money Payment Buttons */}
-               {(paymentMethod === "mtn" || paymentMethod === "airtel") && !hasInitiatedPayment && (
+               {(paymentMethod === "mtn" || paymentMethod === "airtel") && (
                  <div className="space-y-4">
                    <Button 
                      onClick={handleMobilePayment}
@@ -176,7 +191,7 @@ const PaymentStep = ({
                )}
 
                {/* Screenshot Upload Section */}
-               {(hasInitiatedPayment || paymentMethod === "schoolpay") && paymentMethod !== "card" && (
+               {(hasInitiatedPayment || paymentMethod === "schoolpay" || paymentMethod === "bank") && (
                  <div className="space-y-4">
                    <div className="space-y-2">
                      <Label>Upload Payment Screenshot</Label>
@@ -227,14 +242,14 @@ const PaymentStep = ({
                {/* Complete Payment Button */}
                {((hasInitiatedPayment && (paymentMethod === "mtn" || paymentMethod === "airtel")) || 
                  paymentMethod === "schoolpay" || 
-                 paymentMethod === "card") && (
+                 paymentMethod === "bank") && (
                  <Button 
-                   onClick={paymentMethod === "card" ? handlePayment : handleCompletePayment}
+                   onClick={handleCompletePayment}
                    className="w-full" 
                    size="lg"
                    disabled={
                      isProcessingPayment || 
-                     ((paymentMethod === "mtn" || paymentMethod === "airtel" || paymentMethod === "schoolpay") && !paymentScreenshot)
+                     ((paymentMethod === "mtn" || paymentMethod === "airtel" || paymentMethod === "schoolpay" || paymentMethod === "bank") && !paymentScreenshot)
                    }
                  >
                    {isProcessingPayment ? "Processing Payment..." : "Complete Payment"}
@@ -253,9 +268,9 @@ const PaymentStep = ({
                  </p>
                )}
                
-               {paymentMethod === "card" && (
+               {paymentMethod === "bank" && (
                  <p className="text-xs text-muted-foreground text-center">
-                   You must complete payment before proceeding to the final step
+                   Complete your bank transfer and upload a screenshot to proceed
                  </p>
                )}
             </>
