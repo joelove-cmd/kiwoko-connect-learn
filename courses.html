@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kiwoko-connect-learn</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="kiwoko-connect-learn" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="stylesheet" crossorigin href="/assets/index-DlX-eRGL.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header class="bg-background shadow-lg border-b">
+        <!-- Top bar with contact info -->
+        <div class="bg-primary text-primary-foreground py-2">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-between items-center text-sm">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-1">
+                  <i data-lucide="phone" class="h-4 w-4"></i>
+                  <span>0392 912059</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i data-lucide="mail" class="h-4 w-4"></i>
+                  <span>principalnmts@kiwokohospital.com</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-1">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                <span>Kiwoko Hospital, Luweero, Uganda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <a href="index.html" class="flex items-center space-x-3">
+                <img
+                  src="/lovable-uploads/8c52e7cd-49ad-40df-b2b2-a3701eca0b7a.png"
+                  alt="Kiwoko Hospital Logo"
+                  class="w-12 h-12 object-contain"
+                />
+                <div>
+                  <h1 class="text-xl font-bold text-primary">Kiwoko Health</h1>
+                  <p class="text-sm text-muted-foreground">Training Institute</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-1">
+              <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
+              <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
+              <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
+              <a href="blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
+              <a href="apply.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
+              <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+              <button id="mobile-menu-button" class="p-2 rounded-md inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Open main menu</span>
+                <i data-lucide="menu" class="h-6 w-6" id="mobile-menu-open-icon"></i>
+                <i data-lucide="x" class="h-6 w-6 hidden" id="mobile-menu-close-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <nav class="flex flex-col space-y-1">
+              <a href="index.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
+              <a href="about.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
+              <a href="courses.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
+              <a href="blog.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
+              <a href="apply.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
+              <a href="contact.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <i data-lucide="graduation-cap" class="h-16 w-16 mx-auto mb-6 text-white/80"></i>
+              <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Programs</h1>
+              <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                Choose from our comprehensive range of healthcare education programs designed to prepare you for a rewarding career in healthcare.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Program Highlights -->
+        <section class="py-16 bg-muted/30">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-primary mb-4">Meet Our Students</h2>
+              <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Our students represent the future of healthcare in Uganda. See them in action across our various programs.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/lovable-uploads/cecbbf59-eef7-404e-a411-5e9312d678e0.png"
+                  alt="Mixed group of students with faculty"
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-primary mb-2">Faculty & Student Mentorship</h3>
+                  <p class="text-muted-foreground">Our experienced faculty work closely with students, providing guidance and support throughout their academic journey.</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/lovable-uploads/65925656-1a63-4407-905f-36804319c837.png"
+                  alt="Diverse group of female and male students"
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-primary mb-2">Diverse Learning Community</h3>
+                  <p class="text-muted-foreground">Students from different backgrounds come together to learn and grow in our inclusive educational environment.</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <img
+                  src="/lovable-uploads/524f7fa6-8262-4d4e-b8bb-988af483e04f.png"
+                  alt="Male students in healthcare uniforms"
+                  class="w-full h-64 object-cover"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold text-primary mb-2">Breaking Gender Barriers</h3>
+                  <p class="text-muted-foreground">We encourage and support male students to pursue careers in nursing and healthcare, breaking traditional stereotypes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Programs Grid -->
+        <section class="py-16">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <!-- Certificate in Nursing -->
+              <div class="hover:shadow-lg transition-shadow rounded-lg border">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <i data-lucide="heart" class="h-8 w-8 text-secondary"></i>
+                      <div>
+                        <h3 class="text-xl font-bold">Certificate in Nursing</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                          <span class="inline-block px-2 py-1 text-xs font-semibold text-secondary-foreground bg-secondary rounded-full">Certificate</span>
+                          <div class="flex items-center text-sm text-muted-foreground">
+                            <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                            2.5 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground">Comprehensive nursing education preparing compassionate and skilled nurses for various healthcare settings.</p>
+                </div>
+                <div class="p-6 space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Entry Requirements</h4>
+                    <ul class="text-sm text-muted-foreground space-y-1">
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UACE with at least 2 principal passes</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UCE with at least 5 passes including English, Mathematics, and Sciences</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Must be at least 18 years old</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Career Opportunities</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs border rounded-full px-2 py-1">Staff Nurse</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Community Health Nurse</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Hospital Nurse</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Key Subjects</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Anatomy & Physiology</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Nursing Fundamentals</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Medical-Surgical Nursing</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Pediatric Nursing</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Mental Health Nursing</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center pt-4">
+                    <a href="apply.html" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90">Apply Now</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate in Midwifery -->
+              <div class="hover:shadow-lg transition-shadow rounded-lg border">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <i data-lucide="baby" class="h-8 w-8 text-secondary"></i>
+                      <div>
+                        <h3 class="text-xl font-bold">Certificate in Midwifery</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                          <span class="inline-block px-2 py-1 text-xs font-semibold text-secondary-foreground bg-secondary rounded-full">Certificate</span>
+                          <div class="flex items-center text-sm text-muted-foreground">
+                            <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                            2.5 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground">Specialized training in maternal and newborn care, family planning, and reproductive health services.</p>
+                </div>
+                <div class="p-6 space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Entry Requirements</h4>
+                    <ul class="text-sm text-muted-foreground space-y-1">
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UACE with at least 2 principal passes</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UCE with at least 5 passes including Biology and Chemistry</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Must be at least 18 years old</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Career Opportunities</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs border rounded-full px-2 py-1">Certified Midwife</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Maternal Health Assistant</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Family Planning Counselor</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Key Subjects</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Maternal Health</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Newborn Care</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Family Planning</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Reproductive Health</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Emergency Obstetrics</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center pt-4">
+                    <a href="apply.html" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90">Apply Now</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Diploma in Nursing -->
+              <div class="hover:shadow-lg transition-shadow rounded-lg border">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <i data-lucide="heart" class="h-8 w-8 text-secondary"></i>
+                      <div>
+                        <h3 class="text-xl font-bold">Diploma in Nursing</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                          <span class="inline-block px-2 py-1 text-xs font-semibold text-secondary-foreground bg-secondary rounded-full">Diploma</span>
+                          <div class="flex items-center text-sm text-muted-foreground">
+                            <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                            1.5 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground">Advanced nursing education for experienced healthcare workers seeking diploma qualifications.</p>
+                </div>
+                <div class="p-6 space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Entry Requirements</h4>
+                    <ul class="text-sm text-muted-foreground space-y-1">
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Certificate in Nursing</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Valid nursing registration</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>At least 2 years nursing experience</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Career Opportunities</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs border rounded-full px-2 py-1">Senior Nurse</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Ward Supervisor</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Clinical Instructor</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Key Subjects</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Advanced Nursing Practice</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Leadership in Nursing</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Research Methods</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Quality Improvement</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Health Management</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center pt-4">
+                    <a href="apply.html" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90">Apply Now</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Diploma in Midwifery -->
+              <div class="hover:shadow-lg transition-shadow rounded-lg border">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <i data-lucide="baby" class="h-8 w-8 text-secondary"></i>
+                      <div>
+                        <h3 class="text-xl font-bold">Diploma in Midwifery</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                          <span class="inline-block px-2 py-1 text-xs font-semibold text-secondary-foreground bg-secondary rounded-full">Diploma</span>
+                          <div class="flex items-center text-sm text-muted-foreground">
+                            <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                            1.5 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground">Advanced midwifery training for certified midwives seeking diploma qualification.</p>
+                </div>
+                <div class="p-6 space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Entry Requirements</h4>
+                    <ul class="text-sm text-muted-foreground space-y-1">
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Certificate in Midwifery</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Valid midwifery registration</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>At least 2 years midwifery experience</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Career Opportunities</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs border rounded-full px-2 py-1">Senior Midwife</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Midwifery Supervisor</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Maternal Health Specialist</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Key Subjects</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Advanced Midwifery Practice</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">High-Risk Pregnancies</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Newborn Intensive Care</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Midwifery Leadership</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Research in Midwifery</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center pt-4">
+                    <a href="apply.html" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90">Apply Now</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Certificate in Medical Laboratory Techniques -->
+              <div class="hover:shadow-lg transition-shadow rounded-lg border">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                      <i data-lucide="microscope" class="h-8 w-8 text-secondary"></i>
+                      <div>
+                        <h3 class="text-xl font-bold">Certificate in Medical Laboratory Techniques</h3>
+                        <div class="flex items-center space-x-2 mt-1">
+                          <span class="inline-block px-2 py-1 text-xs font-semibold text-secondary-foreground bg-secondary rounded-full">Certificate</span>
+                          <div class="flex items-center text-sm text-muted-foreground">
+                            <i data-lucide="clock" class="h-4 w-4 mr-1"></i>
+                            2 Years
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground">Training in basic laboratory techniques and diagnostic testing procedures.</p>
+                </div>
+                <div class="p-6 space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Entry Requirements</h4>
+                    <ul class="text-sm text-muted-foreground space-y-1">
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UACE with passes in Chemistry and Biology</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>UCE with Mathematics and Sciences</li>
+                      <li class="flex items-start"><span class="text-secondary mr-2">•</span>Good analytical skills</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Career Opportunities</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs border rounded-full px-2 py-1">Laboratory Technician</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Medical Laboratory Assistant</span>
+                      <span class="text-xs border rounded-full px-2 py-1">Research Assistant</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold mb-2 text-primary">Key Subjects</h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Clinical Chemistry</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Hematology</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Microbiology</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Parasitology</span>
+                      <span class="text-xs bg-secondary text-secondary-foreground rounded-full px-2 py-1">Laboratory Safety</span>
+                    </div>
+                  </div>
+                  <div class="flex justify-center pt-4">
+                    <a href="apply.html" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90">Apply Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Application Process -->
+        <section class="py-16 bg-muted/30">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-primary mb-4">Application Process</h2>
+              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Follow these simple steps to begin your journey with Kiwoko Health Training Institute.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="text-center p-6 rounded-lg border">
+                <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                <h3 class="font-semibold mb-2">Choose Program</h3>
+                <p class="text-sm text-muted-foreground">Select your desired healthcare program</p>
+              </div>
+              <div class="text-center p-6 rounded-lg border">
+                <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                <h3 class="font-semibold mb-2">Submit Application</h3>
+                <p class="text-sm text-muted-foreground">Complete and submit your application online</p>
+              </div>
+              <div class="text-center p-6 rounded-lg border">
+                <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                <h3 class="font-semibold mb-2">Document Review</h3>
+                <p class="text-sm text-muted-foreground">We review your academic documents</p>
+              </div>
+              <div class="text-center p-6 rounded-lg border">
+                <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                <h3 class="font-semibold mb-2">Start Learning</h3>
+                <p class="text-sm text-muted-foreground">Begin your healthcare education journey</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-8">
+              <a href="apply.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90">Start Your Application</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bg-primary text-primary-foreground">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div>
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                  <span class="text-white font-bold text-lg">K</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Kiwoko Health</h3>
+                  <p class="text-sm opacity-90">Training Institute</p>
+                </div>
+              </div>
+              <p class="text-sm opacity-90 leading-relaxed">
+                Leading the way in health education and training excellence across Uganda and East Africa.
+              </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="about.html" class="text-sm hover:text-accent transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="courses.html" class="text-sm hover:text-accent transition-colors">
+                    Our Courses
+                  </a>
+                </li>
+                <li>
+                  <a href="staff.html" class="text-sm hover:text-accent transition-colors">
+                    Faculty & Staff
+                  </a>
+                </li>
+                <li>
+                  <a href="apply.html" class="text-sm hover:text-accent transition-colors">
+                    Apply Online
+                  </a>
+                </li>
+                <li>
+                  <a href="blog.html" class="text-sm hover:text-accent transition-colors">
+                    News & Blog
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Programs -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Programs</h3>
+              <ul class="space-y-2">
+                <li>
+                  <span class="text-sm opacity-90">Certificate in Nursing</span>
+                </li>
+                <li>
+                  <span class="text-sm opacity-90">Certificate in Midwifery</span>
+                </li>
+                <li>
+                  <span class="text-sm opacity-90">Diploma in Nursing</span>
+                </li>
+                <li>
+                  <span class="text-sm opacity-90">Diploma in Midwifery</span>
+                </li>
+                <li>
+                  <span class="text-sm opacity-90">Certificate in Medical Laboratory Techniques</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+              <div class="space-y-3">
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="map-pin" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">Kiwoko Hospital, PO Box 149, Luweero, Uganda</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="phone" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">0392 912059</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">principalnmts@kiwokohospital.com</span>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex space-x-3 mt-4">
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <i data-lucide="facebook" class="h-4 w-4"></i>
+                </a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <i data-lucide="twitter" class="h-4 w-4"></i>
+                </a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <i data-lucide="instagram" class="h-4 w-4"></i>
+                </a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                  <i data-lucide="linkedin" class="h-4 w-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm opacity-90">
+              © 2024 Kiwoko Health Training Institute. All rights reserved.
+            </p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+              <a href="privacy.html" class="text-sm hover:text-accent transition-colors">
+                Privacy Policy
+              </a>
+              <a href="terms.html" class="text-sm hover:text-accent transition-colors">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('mobile-menu-open-icon');
+      const closeIcon = document.getElementById('mobile-menu-close-icon');
+
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      const mobileNavLinks = mobileMenu.querySelectorAll('a');
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+      });
+
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

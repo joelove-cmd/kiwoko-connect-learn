@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kiwoko-connect-learn - Apply</title>
+    <link rel="stylesheet" crossorigin href="/assets/index-DlX-eRGL.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header class="bg-background shadow-lg border-b">
+        <!-- Top bar with contact info -->
+        <div class="bg-primary text-primary-foreground py-2">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-between items-center text-sm">
+              <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-1">
+                  <i data-lucide="phone" class="h-4 w-4"></i>
+                  <span>0392 912059</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                  <i data-lucide="mail" class="h-4 w-4"></i>
+                  <span>principalnmts@kiwokohospital.com</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-1">
+                <i data-lucide="map-pin" class="h-4 w-4"></i>
+                <span>Kiwoko Hospital, Luweero, Uganda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main navigation -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <a href="index.html" class="flex items-center space-x-3">
+                <img
+                  src="/lovable-uploads/8c52e7cd-49ad-40df-b2b2-a3701eca0b7a.png"
+                  alt="Kiwoko Hospital Logo"
+                  class="w-12 h-12 object-contain"
+                />
+                <div>
+                  <h1 class="text-xl font-bold text-primary">Kiwoko Health</h1>
+                  <p class="text-sm text-muted-foreground">Training Institute</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-1">
+              <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
+              <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
+              <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
+              <a href="blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
+              <a href="apply.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
+              <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+              <button id="mobile-menu-button" class="p-2 rounded-md inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Open main menu</span>
+                <i data-lucide="menu" class="h-6 w-6" id="mobile-menu-open-icon"></i>
+                <i data-lucide="x" class="h-6 w-6 hidden" id="mobile-menu-close-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Navigation -->
+          <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <nav class="flex flex-col space-y-1">
+              <a href="index.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
+              <a href="about.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
+              <a href="courses.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
+              <a href="blog.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
+              <a href="apply.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
+              <a href="contact.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <i data-lucide="file-text" class="h-16 w-16 mx-auto mb-6 text-white/80"></i>
+              <h1 class="text-4xl md:text-5xl font-bold mb-6">Apply Now</h1>
+              <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                Take the first step towards your healthcare career. Complete your application to join Kiwoko Health Training Institute.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Application Form -->
+        <section class="py-16">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <form id="application-form" class="space-y-8 border rounded-lg p-8">
+              <div class="border rounded-lg p-6 space-y-8">
+                  <h2 class="text-2xl font-bold">Personal & Medical Information</h2>
+                  <p class="text-muted-foreground">Please provide your personal details and medical information.</p>
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6 text-primary">A. PERSONAL INFORMATION</h3>
+                      <div class="space-y-4">
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div>
+                                  <label for="firstName" class="block text-sm font-medium text-gray-700">First Name *</label>
+                                  <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              </div>
+                              <div>
+                                  <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name *</label>
+                                  <input type="text" id="lastName" name="lastName" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              </div>
+                          </div>
+                          <div>
+                              <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality *</label>
+                              <input type="text" id="nationality" name="nationality" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                          </div>
+                          <div>
+                              <h4 class="font-medium mb-3">Address</h4>
+                              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                  <div>
+                                      <label for="homeDistrict" class="block text-sm font-medium text-gray-700">Home District *</label>
+                                      <input type="text" id="homeDistrict" name="homeDistrict" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                  </div>
+                                  <div>
+                                      <label for="telephone" class="block text-sm font-medium text-gray-700">Telephone *</label>
+                                      <input type="text" id="telephone" name="telephone" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                  </div>
+                                  <div>
+                                      <label for="emailAddress" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                                      <input type="email" id="emailAddress" name="emailAddress" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                  </div>
+                                  <div>
+                                      <label for="postalAddress" class="block text-sm font-medium text-gray-700">Postal Address</label>
+                                      <input type="text" id="postalAddress" name="postalAddress" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6 text-primary">B. MEDICAL INFORMATION</h3>
+                      <div class="space-y-4">
+                          <div>
+                              <label class="text-base font-medium">1. Do you have any pre-existing medical condition(s)?</label>
+                              <div class="flex space-x-6 mt-2">
+                                  <div class="flex items-center space-x-2">
+                                      <input type="radio" id="yes" name="hasPreExistingCondition" value="yes" class="text-primary">
+                                      <label for="yes">Yes</label>
+                                  </div>
+                                  <div class="flex items-center space-x-2">
+                                      <input type="radio" id="no" name="hasPreExistingCondition" value="no" class="text-primary">
+                                      <label for="no">No</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div id="medicalConditionSection" class="hidden">
+                              <label for="medicalCondition" class="block text-sm font-medium text-gray-700">2. If yes above, State the condition</label>
+                              <textarea id="medicalCondition" name="medicalCondition" rows="3" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Please describe your medical condition(s)"></textarea>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="border rounded-lg p-6 space-y-8">
+                  <h2 class="text-2xl font-bold">Academic Information</h2>
+                  <p class="text-muted-foreground">Please provide your academic qualifications and upload required documents.</p>
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6 text-primary">C. ACADEMIC INFORMATION</h3>
+                      <div class="space-y-4">
+                          <div>
+                              <h4 class="font-medium mb-3">1. Uganda Certificate of Education (UCE) / "O" Level</h4>
+                              <div class="mb-4">
+                                  <label for="uceYear" class="block text-sm font-medium text-gray-700">Year of sitting</label>
+                                  <input type="text" id="uceYear" name="uceYear" placeholder="e.g., 2020" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              </div>
+                              <div class="overflow-x-auto">
+                                  <table class="w-full border-collapse border border-border">
+                                      <thead>
+                                          <tr>
+                                              <th class="border border-border p-2 bg-muted text-left">SUBJECT</th>
+                                              <th class="border border-border p-2 bg-muted text-left">AGGREGATE</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject1" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate1" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject2" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate2" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject3" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate3" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject4" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate4" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject5" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate5" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject6" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate6" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject7" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate7" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uceSubject8" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td><td class="border border-border p-2"><input type="text" name="uceAggregate8" placeholder="Grade" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                          <div>
+                              <h4 class="font-medium mb-3">2. Uganda Advanced Certificate of Education (UACE) / 'A' Level [if applicable]</h4>
+                              <div class="mb-4">
+                                  <label for="uaceYear" class="block text-sm font-medium text-gray-700">Year of sitting</label>
+                                  <input type="text" id="uaceYear" name="uaceYear" placeholder="e.g., 2022" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              </div>
+                              <div class="overflow-x-auto">
+                                  <table class="w-full border-collapse border border-border">
+                                      <thead>
+                                          <tr>
+                                              <th class="border border-border p-2 bg-muted text-left">SUBJECT</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uaceSubject1" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uaceSubject2" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uaceSubject3" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                          <tr><td class="border border-border p-2"><input type="text" name="uaceSubject4" placeholder="Subject name" class="block w-full border-gray-300 rounded-md shadow-sm"></td></tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <div class="mt-4">
+                                  <label for="uaceTotalPoints" class="block text-sm font-medium text-gray-700">Total Points</label>
+                                  <input type="text" id="uaceTotalPoints" name="uaceTotalPoints" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6 text-primary">Program Selection</h3>
+                      <div>
+                          <label for="program" class="block text-sm font-medium text-gray-700">Desired Program *</label>
+                          <select id="program" name="program" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                              <option value="">Select a program</option>
+                              <option value="Certificate in Nursing (2.5 years)">Certificate in Nursing (2.5 years)</option>
+                              <option value="Certificate in Midwifery (2.5 years)">Certificate in Midwifery (2.5 years)</option>
+                              <option value="Diploma in Nursing (1.5 years)">Diploma in Nursing (1.5 years)</option>
+                              <option value="Diploma in Midwifery (1.5 years)">Diploma in Midwifery (1.5 years)</option>
+                              <option value="Certificate in Medical Laboratory Techniques (2 years)">Certificate in Medical Laboratory Techniques (2 years)</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div>
+                      <h3 class="text-lg font-semibold mb-6 text-primary">Document Uploads</h3>
+                      <p class="text-muted-foreground mb-6">Upload the required documents in PDF, JPG, or PNG format. Maximum file size: 5MB per document.</p>
+                      <div class="space-y-6">
+                          <div>
+                              <label class="text-base font-medium">Academic Documents (Certificates/Transcripts) *</label>
+                              <input type="file" name="academicDocuments" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                          <div>
+                              <label class="text-base font-medium">Birth Certificate *</label>
+                              <input type="file" name="birthCertificate" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                          <div>
+                              <label class="text-base font-medium">Marriage Certificate (if married)</label>
+                              <input type="file" name="marriageCertificate" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                          <div>
+                              <label class="text-base font-medium">Recommendation Letter (if applicable)</label>
+                              <input type="file" name="recommendationLetter" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                          <div>
+                              <label class="text-base font-medium">LC Letter (Original) *</label>
+                              <input type="file" name="lcLetter" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                          <div>
+                              <label class="text-base font-medium">National ID/Passport *</label>
+                              <input type="file" name="nationalId" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="border rounded-lg p-6 space-y-6">
+                  <h2 class="text-2xl font-bold">Application Fee Payment</h2>
+                  <p class="text-muted-foreground">Complete your application fee payment to proceed.</p>
+                  <div class="text-center">
+                    <p class="text-3xl font-bold text-primary">UGX 50,000</p>
+                    <p class="text-sm text-muted-foreground">Application Fee</p>
+                  </div>
+                  <div class="space-y-3">
+                    <label class="text-base font-medium">Select Payment Method</label>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="radio" id="mtn" name="paymentMethod" value="mtn" class="text-primary">
+                        <label for="mtn" class="flex items-center"><i data-lucide="smartphone" class="h-5 w-5 text-yellow-500 mr-2"></i>MTN Mobile Money</label>
+                      </div>
+                      <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                        <input type="radio" id="airtel" name="paymentMethod" value="airtel" class="text-primary">
+                        <label for="airtel" class="flex items-center"><i data-lucide="smartphone" class="h-5 w-5 text-red-500 mr-2"></i>Airtel Money</label>
+                      </div>
+                       <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                         <input type="radio" id="schoolpay" name="paymentMethod" value="schoolpay" class="text-primary">
+                         <label for="schoolpay" class="flex items-center"><i data-lucide="credit-card" class="h-5 w-5 text-blue-500 mr-2"></i>School Pay</label>
+                       </div>
+                       <div class="flex items-center space-x-3 p-3 border rounded-lg">
+                         <input type="radio" id="bank" name="paymentMethod" value="bank" class="text-primary">
+                         <label for="bank" class="flex items-center"><i data-lucide="credit-card" class="h-5 w-5 text-green-500 mr-2"></i>Bank Transfer</label>
+                       </div>
+                    </div>
+                  </div>
+                  <div>
+                      <label class="text-base font-medium">Payment Screenshot</label>
+                      <input type="file" name="paymentScreenshot" class="mt-2 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                  </div>
+              </div>
+              <div class="border rounded-lg p-6 space-y-8">
+                  <h2 class="text-2xl font-bold">Declaration & Submission</h2>
+                  <p class="text-muted-foreground">Please review your application and provide your declaration.</p>
+                  <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                    <h4 class="font-semibold mb-3">Applicant's Declaration</h4>
+                    <p class="text-sm text-muted-foreground mb-4">
+                      I hereby certify to the best of my knowledge that the particulars given in this application form are true and complete in all aspects. I understand that any false information provided may result in the rejection of my application.
+                    </p>
+                  </div>
+                  <div>
+                    <label for="applicantName" class="block text-sm font-medium text-gray-700">Full Name of Applicant (as Declaration Signature) *</label>
+                    <input type="text" id="applicantName" name="applicantName" placeholder="Enter your full name as your digital signature" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <input type="checkbox" id="terms" name="agreeToTerms" required class="rounded border-gray-300 text-primary shadow-sm">
+                    <div>
+                      <label for="terms" class="text-sm leading-relaxed">
+                        I certify that all information provided in this application is true and complete to the best of my knowledge. *
+                      </label>
+                    </div>
+                  </div>
+              </div>
+              <button type="submit" id="submit-btn" class="w-full bg-green-600 hover:bg-green-700 inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white">Submit Application</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-primary text-primary-foreground">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div>
+              <div class="flex items-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                  <span class="text-white font-bold text-lg">K</span>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Kiwoko Health</h3>
+                  <p class="text-sm opacity-90">Training Institute</p>
+                </div>
+              </div>
+              <p class="text-sm opacity-90 leading-relaxed">
+                Leading the way in health education and training excellence across Uganda and East Africa.
+              </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                <li><a href="about.html" class="text-sm hover:text-accent transition-colors">About Us</a></li>
+                <li><a href="courses.html" class="text-sm hover:text-accent transition-colors">Our Courses</a></li>
+                <li><a href="staff.html" class="text-sm hover:text-accent transition-colors">Faculty & Staff</a></li>
+                <li><a href="apply.html" class="text-sm hover:text-accent transition-colors">Apply Online</a></li>
+                <li><a href="blog.html" class="text-sm hover:text-accent transition-colors">News & Blog</a></li>
+              </ul>
+            </div>
+
+            <!-- Programs -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Programs</h3>
+              <ul class="space-y-2">
+                <li><span class="text-sm opacity-90">Certificate in Nursing</span></li>
+                <li><span class="text-sm opacity-90">Certificate in Midwifery</span></li>
+                <li><span class="text-sm opacity-90">Diploma in Nursing</span></li>
+                <li><span class="text-sm opacity-90">Diploma in Midwifery</span></li>
+                <li><span class="text-sm opacity-90">Certificate in Medical Laboratory Techniques</span></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+              <div class="space-y-3">
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="map-pin" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">Kiwoko Hospital, PO Box 149, Luweero, Uganda</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="phone" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">0392 912059</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
+                  <span class="text-sm">principalnmts@kiwokohospital.com</span>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex space-x-3 mt-4">
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i data-lucide="twitter" class="h-4 w-4"></i></a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+                <a href="#" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"><i data-lucide="linkedin" class="h-4 w-4"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm opacity-90">© 2024 Kiwoko Health Training Institute. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+              <a href="privacy.html" class="text-sm hover:text-accent transition-colors">Privacy Policy</a>
+              <a href="terms.html" class="text-sm hover:text-accent transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const { createClient } = supabase;
+        const supabaseUrl = "https://adeqxcjnajawbpwmrfqy.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkZXF4Y2puYWphd2Jwd21yZnF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4MDMyNzUsImV4cCI6MjA2OTM3OTI3NX0.SkZh3CiN8jU8QeAyU_TWbTVsYlmdYDcqk3XvUa8OwrM";
+        const _supabase = createClient(supabaseUrl, supabaseKey);
+
+        const form = document.getElementById('application-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Form data:', data);
+
+            alert('Application submitted successfully! (This is a demo)');
+            form.reset();
+        });
+    </script>
+  </body>
+</html>
