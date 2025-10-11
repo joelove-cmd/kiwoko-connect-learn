@@ -66,7 +66,6 @@
               <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
               <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
               <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
-              <a href="blog.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
               <a href="apply.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
               <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
             </nav>
@@ -87,7 +86,6 @@
               <a href="index.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Home</a>
               <a href="about.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">About</a>
               <a href="courses.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Courses</a>
-              <a href="blog.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Blog</a>
               <a href="apply.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Apply</a>
               <a href="contact.html" class="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors">Contact</a>
             </nav>
@@ -95,247 +93,269 @@
         </div>
       </header>
 
-      <main>
-        <!-- Hero Section -->
-        <section class="relative bg-gradient-to-r from-primary via-primary to-secondary text-white py-20">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-              <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                Kiwoko Health Training Institute
-              </h1>
-              <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
-                Shaping the future of healthcare through excellence in medical education and training
+      <main class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <!-- Hero Section -->
+          <section class="relative bg-gradient-to-r from-primary via-primary to-secondary text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                  Kiwoko Health Training Institute
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+                  Shaping the future of healthcare through excellence in medical education and training
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a href="apply.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-secondary hover:bg-secondary-hover">
+                    Apply Now
+                    <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                  </a>
+                  <a href="courses.html" class="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary">
+                    Explore Programs
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Features Section -->
+          <section class="py-16 bg-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Why Choose Kiwoko Health?</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  We are committed to providing world-class healthcare education that transforms lives and communities.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center hover:shadow-lg transition-shadow p-6">
+                  <div class="flex justify-center mb-4">
+                    <i data-lucide="heart" class="h-8 w-8 text-secondary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Healthcare Excellence</h3>
+                  <p class="text-muted-foreground">Leading healthcare education with modern facilities and experienced faculty.</p>
+                </div>
+                <div class="text-center hover:shadow-lg transition-shadow p-6">
+                  <div class="flex justify-center mb-4">
+                    <i data-lucide="graduation-cap" class="h-8 w-8 text-secondary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Quality Education</h3>
+                  <p class="text-muted-foreground">Comprehensive programs designed to produce skilled healthcare professionals.</p>
+                </div>
+                <div class="text-center hover:shadow-lg transition-shadow p-6">
+                  <div class="flex justify-center mb-4">
+                    <i data-lucide="users" class="h-8 w-8 text-secondary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Community Impact</h3>
+                  <p class="text-muted-foreground">Training healthcare workers who serve communities across Uganda and beyond.</p>
+                </div>
+                <div class="text-center hover:shadow-lg transition-shadow p-6">
+                  <div class="flex justify-center mb-4">
+                    <i data-lucide="award" class="h-8 w-8 text-secondary"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Accredited Programs</h3>
+                  <p class="text-muted-foreground">All our programs are accredited by the Ministry of Education and Health.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Student Showcase -->
+          <section class="py-16 bg-muted/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Our Students in Action</h2>
+                <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  See our dedicated students from various programs as they prepare to become the next generation of healthcare professionals
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+                  <img
+                    src="lovable-uploads/5921c163-8581-4d91-a9ce-2d6c0e64fa2d.png"
+                    alt="Students in white uniforms outside Resource Centre"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-primary text-center">Ready to Serve</h3>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+                  <img
+                    src="lovable-uploads/54d4530d-c256-4ea6-af00-4887d0bc793e.png"
+                    alt="Female students in green and white uniforms"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-primary text-center">Lab Excellence</h3>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+                  <img
+                    src="lovable-uploads/126dbbf1-8682-4ee1-83b4-d5557dc7cfc0.png"
+                    alt="Laboratory technician students in white and blue uniforms"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-primary text-center">Future Leaders</h3>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
+                  <img
+                    src="lovable-uploads/ad9a238f-3b03-4dbe-965f-1c19635de530.png"
+                    alt="Nursing students in blue uniforms with white aprons"
+                    class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-semibold text-primary text-center">Compassionate Care</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Programs Section -->
+          <section class="py-16 bg-muted/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">Our Programs</h2>
+                <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Explore our comprehensive range of healthcare education programs designed to meet industry demands.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="hover:shadow-lg transition-shadow p-6">
+                  <div class="flex items-center mb-3">
+                    <div class="p-2 bg-secondary/10 rounded-lg mr-3">
+                      <i data-lucide="heart" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Certificate in Nursing</h3>
+                      <p class="text-sm text-secondary">2.5 Years</p>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground text-sm mb-4">Comprehensive nursing education preparing compassionate caregivers.</p>
+                  <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
+                    Learn More
+                  </a>
+                </div>
+                <div class="hover:shadow-lg transition-shadow p-6">
+                  <div class="flex items-center mb-3">
+                    <div class="p-2 bg-secondary/10 rounded-lg mr-3">
+                      <i data-lucide="users" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Certificate in Midwifery</h3>
+                      <p class="text-sm text-secondary">2.5 Years</p>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground text-sm mb-4">Specialized training in maternal and newborn care.</p>
+                  <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
+                    Learn More
+                  </a>
+                </div>
+                <div class="hover:shadow-lg transition-shadow p-6">
+                  <div class="flex items-center mb-3">
+                    <div class="p-2 bg-secondary/10 rounded-lg mr-3">
+                      <i data-lucide="heart" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Diploma in Nursing</h3>
+                      <p class="text-sm text-secondary">1.5 Years</p>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground text-sm mb-4">Advanced nursing education for professional development.</p>
+                  <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
+                    Learn More
+                  </a>
+                </div>
+                <div class="hover:shadow-lg transition-shadow p-6">
+                  <div class="flex items-center mb-3">
+                    <div class="p-2 bg-secondary/10 rounded-lg mr-3">
+                      <i data-lucide="users" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Diploma in Midwifery</h3>
+                      <p class="text-sm text-secondary">1.5 Years</p>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground text-sm mb-4">Advanced midwifery training for skilled practitioners.</p>
+                  <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
+                    Learn More
+                  </a>
+                </div>
+                <div class="hover:shadow-lg transition-shadow p-6">
+                  <div class="flex items-center mb-3">
+                    <div class="p-2 bg-secondary/10 rounded-lg mr-3">
+                      <i data-lucide="book-open" class="h-6 w-6"></i>
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Certificate in Medical Laboratory Techniques</h3>
+                      <p class="text-sm text-secondary">2 Years</p>
+                    </div>
+                  </div>
+                  <p class="text-muted-foreground text-sm mb-4">Medical laboratory science and diagnostic technology.</p>
+                  <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <a href="courses.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-hover">
+                  View All Programs
+                  <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="py-16 bg-gradient-to-r from-secondary to-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <i data-lucide="globe" class="h-16 w-16 mx-auto mb-6 text-white/80"></i>
+              <h2 class="text-3xl font-bold mb-4">Ready to Start Your Healthcare Career?</h2>
+              <p class="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                Join thousands of successful graduates who are making a difference in healthcare across Uganda and beyond.
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="apply.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-secondary hover:bg-secondary-hover">
-                  Apply Now
+                  Apply Today
                   <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
                 </a>
-                <a href="courses.html" class="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary">
-                  Explore Programs
+                <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary">
+                  Contact Us
                 </a>
               </div>
+            </div>
+          </section>
+        </div>
+        <div class="md:col-span-1 p-8">
+          <h2 class="text-2xl font-bold text-primary mb-4">Updates</h2>
+          <div class="space-y-6">
+            <!-- Post 1 -->
+            <div class="hover:shadow-lg transition-shadow rounded-lg border p-4">
+              <span class="text-xs text-muted-foreground">Jan 15, 2024 • 5 min read</span>
+              <h3 class="text-md font-bold mt-1">The Future of Healthcare Education in Uganda</h3>
+            </div>
+            <!-- Post 2 -->
+            <div class="hover:shadow-lg transition-shadow rounded-lg border p-4">
+              <span class="text-xs text-muted-foreground">Jan 10, 2024 • 4 min read</span>
+              <h3 class="text-md font-bold mt-1">Career Opportunities for Certified Nurses</h3>
+            </div>
+            <!-- Post 3 -->
+            <div class="hover:shadow-lg transition-shadow rounded-lg border p-4">
+              <span class="text-xs text-muted-foreground">Jan 5, 2024 • 6 min read</span>
+              <h3 class="text-md font-bold mt-1">Importance of Midwifery in Rural Healthcare</h3>
             </div>
           </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="py-16 bg-background">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold text-primary mb-4">Why Choose Kiwoko Health?</h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                We are committed to providing world-class healthcare education that transforms lives and communities.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div class="text-center hover:shadow-lg transition-shadow p-6">
-                <div class="flex justify-center mb-4">
-                  <i data-lucide="heart" class="h-8 w-8 text-secondary"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Healthcare Excellence</h3>
-                <p class="text-muted-foreground">Leading healthcare education with modern facilities and experienced faculty.</p>
-              </div>
-              <div class="text-center hover:shadow-lg transition-shadow p-6">
-                <div class="flex justify-center mb-4">
-                  <i data-lucide="graduation-cap" class="h-8 w-8 text-secondary"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Quality Education</h3>
-                <p class="text-muted-foreground">Comprehensive programs designed to produce skilled healthcare professionals.</p>
-              </div>
-              <div class="text-center hover:shadow-lg transition-shadow p-6">
-                <div class="flex justify-center mb-4">
-                  <i data-lucide="users" class="h-8 w-8 text-secondary"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Community Impact</h3>
-                <p class="text-muted-foreground">Training healthcare workers who serve communities across Uganda and beyond.</p>
-              </div>
-              <div class="text-center hover:shadow-lg transition-shadow p-6">
-                <div class="flex justify-center mb-4">
-                  <i data-lucide="award" class="h-8 w-8 text-secondary"></i>
-                </div>
-                <h3 class="text-xl font-semibold mb-2">Accredited Programs</h3>
-                <p class="text-muted-foreground">All our programs are accredited by the Ministry of Education and Health.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Student Showcase -->
-        <section class="py-16 bg-muted/30">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold text-primary mb-4">Our Students in Action</h2>
-              <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
-                See our dedicated students from various programs as they prepare to become the next generation of healthcare professionals
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
-                <img
-                  src="lovable-uploads/5921c163-8581-4d91-a9ce-2d6c0e64fa2d.png"
-                  alt="Students in white uniforms outside Resource Centre"
-                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div class="p-4">
-                  <h3 class="font-semibold text-primary text-center">Ready to Serve</h3>
-                </div>
-              </div>
-
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
-                <img
-                  src="lovable-uploads/54d4530d-c256-4ea6-af00-4887d0bc793e.png"
-                  alt="Female students in green and white uniforms"
-                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div class="p-4">
-                  <h3 class="font-semibold text-primary text-center">Lab Excellence</h3>
-                </div>
-              </div>
-
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
-                <img
-                  src="lovable-uploads/126dbbf1-8682-4ee1-83b4-d5557dc7cfc0.png"
-                  alt="Laboratory technician students in white and blue uniforms"
-                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div class="p-4">
-                  <h3 class="font-semibold text-primary text-center">Future Leaders</h3>
-                </div>
-              </div>
-
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow">
-                <img
-                  src="lovable-uploads/ad9a238f-3b03-4dbe-965f-1c19635de530.png"
-                  alt="Nursing students in blue uniforms with white aprons"
-                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div class="p-4">
-                  <h3 class="font-semibold text-primary text-center">Compassionate Care</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Programs Section -->
-        <section class="py-16 bg-muted/50">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold text-primary mb-4">Our Programs</h2>
-              <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Explore our comprehensive range of healthcare education programs designed to meet industry demands.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-3">
-                  <div class="p-2 bg-secondary/10 rounded-lg mr-3">
-                    <i data-lucide="heart" class="h-6 w-6"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Certificate in Nursing</h3>
-                    <p class="text-sm text-secondary">2.5 Years</p>
-                  </div>
-                </div>
-                <p class="text-muted-foreground text-sm mb-4">Comprehensive nursing education preparing compassionate caregivers.</p>
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
-                  Learn More
-                </a>
-              </div>
-              <div class="hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-3">
-                  <div class="p-2 bg-secondary/10 rounded-lg mr-3">
-                    <i data-lucide="users" class="h-6 w-6"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Certificate in Midwifery</h3>
-                    <p class="text-sm text-secondary">2.5 Years</p>
-                  </div>
-                </div>
-                <p class="text-muted-foreground text-sm mb-4">Specialized training in maternal and newborn care.</p>
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
-                  Learn More
-                </a>
-              </div>
-              <div class="hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-3">
-                  <div class="p-2 bg-secondary/10 rounded-lg mr-3">
-                    <i data-lucide="heart" class="h-6 w-6"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Diploma in Nursing</h3>
-                    <p class="text-sm text-secondary">1.5 Years</p>
-                  </div>
-                </div>
-                <p class="text-muted-foreground text-sm mb-4">Advanced nursing education for professional development.</p>
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
-                  Learn More
-                </a>
-              </div>
-              <div class="hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-3">
-                  <div class="p-2 bg-secondary/10 rounded-lg mr-3">
-                    <i data-lucide="users" class="h-6 w-6"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Diploma in Midwifery</h3>
-                    <p class="text-sm text-secondary">1.5 Years</p>
-                  </div>
-                </div>
-                <p class="text-muted-foreground text-sm mb-4">Advanced midwifery training for skilled practitioners.</p>
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
-                  Learn More
-                </a>
-              </div>
-              <div class="hover:shadow-lg transition-shadow p-6">
-                <div class="flex items-center mb-3">
-                  <div class="p-2 bg-secondary/10 rounded-lg mr-3">
-                    <i data-lucide="book-open" class="h-6 w-6"></i>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">Certificate in Medical Laboratory Techniques</h3>
-                    <p class="text-sm text-secondary">2 Years</p>
-                  </div>
-                </div>
-                <p class="text-muted-foreground text-sm mb-4">Medical laboratory science and diagnostic technology.</p>
-                <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 w-full">
-                  Learn More
-                </a>
-              </div>
-            </div>
-
-            <div class="text-center mt-8">
-              <a href="courses.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-hover">
-                View All Programs
-                <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="py-16 bg-gradient-to-r from-secondary to-primary text-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <i data-lucide="globe" class="h-16 w-16 mx-auto mb-6 text-white/80"></i>
-            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Healthcare Career?</h2>
-            <p class="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Join thousands of successful graduates who are making a difference in healthcare across Uganda and beyond.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="apply.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-secondary hover:bg-secondary-hover">
-                Apply Today
-                <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
-              </a>
-              <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </section>
+        </div>
       </main>
 
       <footer class="bg-primary text-primary-foreground">
@@ -379,11 +399,6 @@
                 <li>
                   <a href="apply.html" class="text-sm hover:text-accent transition-colors">
                     Apply Online
-                  </a>
-                </li>
-                <li>
-                  <a href="blog.html" class="text-sm hover:text-accent transition-colors">
-                    News & Blog
                   </a>
                 </li>
               </ul>
